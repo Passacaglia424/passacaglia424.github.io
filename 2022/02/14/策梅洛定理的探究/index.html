@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>策梅洛定理的探讨 | Passacaglia的个人站</title>
+  <meta name="keywords" content=" 定理 , 博弈论 ">
+  <meta name="description" content="策梅洛定理的探讨 | Passacaglia的个人站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://passacaglia424.github.io/about/index.html">
+<meta property="og:site_name" content="Passacaglia的个人站">
+<meta property="og:description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-14T03:26:07.636Z">
+<meta property="article:modified_time" content="2022-02-14T03:26:07.636Z">
+<meta property="article:author" content="Passacaglia">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/headportrait.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+<script src="/js/custom-iconfont.js?v=1.1.0" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/author.jpg"/>
+</a>
+<div class="author">
+    <span>Passacaglia</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+            <a title="github"
+               href="https://github.com/Passacaglia424"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/yi-zhang-dui-da-shen"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="bilibili"
+               href="https://space.bilibili.com/435088208"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-bilibili"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:passacaglia@88.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=315156810"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(2)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        
+                        工具
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="杂谈">
+                        
+                        杂谈
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
+<input type="hidden" id="yelog_site_word_count" value="2.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://blog.mariozzj.cn/">MarioZZJ:社会保险建房工程</a></li>
+            
+            <li><a target="_blank" href="https://nbsps.github.io/">nbsps</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>博弈论</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>定理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实用工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>github</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 杂谈 "
+           href="/2022/02/14/%E7%AD%96%E6%A2%85%E6%B4%9B%E5%AE%9A%E7%90%86%E7%9A%84%E6%8E%A2%E7%A9%B6/"
+           data-tag="定理,博弈论"
+           data-author="" >
+            <span class="post-title" title="策梅洛定理的探讨">策梅洛定理的探讨</span>
+            <span class="post-date" title="2022-02-14 18:14:07">2022/02/14</span>
+        </a>
+        
+        <a  class="全部文章 工具 "
+           href="/2022/02/13/Git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="github,实用工具"
+           data-author="" >
+            <span class="post-title" title="Git的使用学习">Git的使用学习</span>
+            <span class="post-date" title="2022-02-13 21:19:34">2022/02/13</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-策梅洛定理的探究" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">策梅洛定理的探讨</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="杂谈">杂谈</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">定理</a>
+            
+            <a class="color4">博弈论</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-02-15 00:58:23'>2022-02-14 18:14</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:2.6k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">1.关于定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">2.已得到验证的游戏</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">经典井字棋</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">无禁手规则的五子棋</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">双人取物游戏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">WU游戏</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">3.定理的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">策梅略定理对积分制是否有效?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">策梅洛定理对二人以上博弈为什么无效？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text">证明结论成立到找出结果需要多少努力？</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3>1.关于定理</h3>
+笔者作为一个棋类，尤其是象棋的爱好者，特别喜欢钻研下棋的一些套路。然而，随着计算机算力的提高，AI技术的发展，人类逐渐开始下不过人工智能。尚在2006年，象棋特级大师许银川还能勉强战胜当时比较强大的电脑浪潮天梭，之后战胜电脑就逐渐成了绝唱，发展到现在，即使运行在普通PC机上的《象棋名手》软件，也不是象棋世界冠军可以抗衡的。2017年，柯洁0:3负于阿尔法狗，也标志者围棋，这一棋类智力之冠的胜利也归人工智能所有。那么，我们可以很自然地想到，会不会有一天,不需要开下，只要棋一摆好，双方就能知道哪一方胜利呢?
+
+<p>这在理论上是可行的。<strong>策梅略定理</strong>（Zermelo’s theorem）是博弈论的一条定理,以恩斯特*策梅洛命名。定理表示在二人的有限游戏中，如果双方皆拥有完全的资讯，并且运气因素并不牵涉在游戏中，那先行或后行者当一必有一方有必胜&#x2F;必不败的策略（注意，也包括平局)。策梅洛定理的论文于1913年以德文发表。</p>
+<p>策梅洛定理仅在双人游戏中有效，在三人及以上的多人游戏中胜负仍是不确定的。定理的具体表现形式，满足<strong>条件</strong>：</p>
+<ol>
+<li>双方依次行动</li>
+<li>有限步，不会出现可以一直重复某种循环的状态</li>
+<li>信息完备，双方均知道先前的步骤且没有隐藏的机制</li>
+<li>仅有赢、输、平局三种结局</li>
+</ol>
+<p>在满足以上四种条件的情况下，只会出现以下<strong>情况</strong>之一</p>
+<ol>
+<li>先走方有必胜的走法</li>
+<li>两者的最优策略会导向平局</li>
+<li>后走方有必胜的走法</li>
+</ol>
+<p>满足情况3：“后走方有必胜的走法”，需要规则内不能有停止行动的选项，否则先手方的最优策略是停一回合，成为实际上的后手方，那么此时后手方的最优解也是停一回合。如果能无限停止，将不满足条件2，如果不能无限停止，将导向情况2。</p>
+<p>对于<strong>策梅洛定理的证明</strong>，可以采用数学归纳法证明。假结束所需的回合数n。n&#x3D;1,即一步就能游戏结束，那么一定会导致先手必胜&#x2F;负&#x2F;和的局面。现在对于任何一个n的值，行动后将转换为一个n-1时的情况，而这时的结果是已知的。因为对于此时先手方行动的情况，必然是以下三种互斥的情况之一：</p>
+<ol>
+<li>存在行动方案使得之后的状态为先手方有必胜策略，那么此时先手有必胜策略；</li>
+<li>所有的行动方案都使得之后的状态为后手方有必胜策略，那么此时后手方有必胜策略；</li>
+<li>不存在行动方案使得之后的状态为先手方有必胜策略，且存在行动方案使得之后的状态为双方有不败的策略，那么此时有双方不败的策略。</li>
+</ol>
+<p>编程上一般使用记忆化搜索作为应用。      </p>
+<h3>2.已得到验证的游戏</h3>
+<h4>经典井字棋</h4>
+经典的3x3井字棋就是一个典型的双方不败游戏。为了增加点代入感，我们先手用○，后手用×来表示吧。
+○的第一步行动为走正中，此时×必须走角落，否则○将必胜：因为○第二步走对位的角落，那么×在堵的过程中会出现堵不上的情况：
+
+<p><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220214233346.png" alt="井字棋图"></p>
+<p>由于井字棋上下左右对称，×走四个位置都会触发以上情况。<br>另一种情况，如果第二步×走角落，那么无论○下一步怎么走，×都可以阻止其连成三个，直至下满，双方和棋。</p>
+<h4>无禁手规则的五子棋</h4>
+
+<blockquote>
+<p>禁手：五子棋术语，指对局中禁止先行一方(黑方)使用的战术，具体包括黑方一子落下时同时形成双活三、双四或长连等三种棋形。禁手只对黑方有效，白方无禁手。黑方禁手的位置称为禁手点。</p>
+</blockquote>
+<p>五子棋在很早的时候，就已经有前人研究出了无禁手规则下先手必胜的情况。对于白棋的应对不同，开局可以分为蒲月、寒星、新月等，但是所有的开局，无论白棋如何防备，只要黑方不下错，都不能阻止黑棋胜利。因此，五子棋赛场上都对先手方有很大的限制。日常下棋达不到那么高的水平，但是一般也能感觉到黑棋优势较大。<br>五子棋执黑必胜的变招相当多，读者感兴趣可以自行了解，这里只列举其中的蒲月开局：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220215000533.png" alt="20220215000533"><br>黑棋正中开局，白棋下在斜线，黑棋再下在3的位置，对此，白棋可以有很多种应对方法：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220215001207.png" alt="20220215001207"><br>其中最后一幅图为白棋最强防守，但是黑方可以选择：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220215001454.png" alt="20220215001454"><br>后招可以参考<a target="_blank" rel="noopener" href="https://wenku.so.com/d/df91d9b58a3c207002ada61806fee442%E3%80%82">https://wenku.so.com/d/df91d9b58a3c207002ada61806fee442。</a></p>
+<h4>双人取物游戏</h4>
+地上摆放了80个物品，每人每次可以取1至4个，双方轮流取物，取到最后一个者胜利，那么某一方是否有必胜策略？
+
+<p>后手方必胜。先手方取X个时，后手方取5-X个，这样每个回合两人加起来都为五个，而5是80的公约数。这类游戏可以拓展到<strong>一般形式</strong>：地上摆放了X个物品，每人每次可以取Y至Z个，取到最后一个者胜利。那么如果X是Y+Z的公倍数，后手方必胜，每次先手方取s个时，后手方取Y+Z-s个。如果X是Y+Z的公倍数，先手方必胜，先手方先取X除以Y+Z的余数个，转换为前一情况的后手方，执行前一情况的必胜策略。如果做过编程类题目，应该对此不陌生。</p>
+<h4>WU游戏</h4>
+确切地说，这个并没有被证实，只是我对此比较感兴趣，想找出有没有一方必胜的方式（按照策梅洛定理，应该是有的）。灵感来自于侯世达著的《哥德尔、艾舍尔、巴赫——集异壁之大成》一书中的WU谜题。
+
+<p>设置游戏规则如下：<br>初始给定”WUWU”字符串，两人参与，双方轮流设计一条规则。<br>规则设置方式：<br>1.假定α,β分别为一至三个任意字母。<br>2.条件项选其一：如果字符串中有α&#x2F;以α开头&#x2F;以α结尾。<br>执行项选其一：可以将其删除并在原位置添加β&#x2F;在串尾添加β&#x2F;在串首添加β。<br>每设定一条规则，将会按顺序执行所有的规则直至字符串不再发生改变，转移到下一个人设定。如果设定规则与之前某规则冲突，则删除之前的规则。不能设置无限递归规则。<br>胜利条件：清空字符串者立即获得胜利，连续两回合将字符串变成同样的全相同字母者获得胜利。</p>
+<h3>3.定理的思考</h3>
+<h4>策梅略定理对积分制是否有效?</h4>
+由于定理的前提条件是结局仅有胜、负、和三种可能，那么把积分设定为：分高者胜，双方同分则平局。那么，定理仍然是有效的。
+如果规则机制中会允许执行某些步骤会导致暂时导向分数降低，但是一定步骤后会收束为分数比常规增加更高的情况，按数学归纳法，这类情况可以成为一个集合，从而将其看做一个步骤，这个步骤集由于更优会取代其它的步骤集合。许多游戏也可以视为积分制，比如象棋设置胜利为10000分，为当下每一步评分，就像现在的象棋打分软件，一些弃子攻杀的步骤也会先打低分再打高分。
+
+<h4>策梅洛定理对二人以上博弈为什么无效？</h4>
+假设三人A、B、C游戏，游戏设定为一方胜利另两方败，或者三人平局。如果按A、B、C的顺序依次执行，如果A有必胜策略，那么把B、C的行动组合，将其看做一个两次行动的对手，从而变成两人形式，似乎可行？但是如果A只有必和策略，那么情况就不太确定了，作为理性人B、C会尝试采取获胜，但是由于只有一个胜利者，会打乱A的布置。其实我也不太确定，以上只是一点推论。
+
+<h4>证明结论成立到找出结果需要多少努力？</h4>
+对于一些简单游戏来说不难，但是对目前的“大棋”很难，按对局的变化数来说，围棋的棋盘就有2^361种可能(减去气中的子的情况)，再加上每一步的可能性，想要穷举以目前的算力要花费数十亿年。那么只能寄托于数学家、科学家们、围棋大师们能不能找到合适的算法了。
+
+<p>对这个定理来说，虽然我们或许目前不能找到一方必胜或必和的方式是怎样的，但是我们能证明它存在也是有意义的。这有些像密码学中的零知识证明，A方在不透露任何知识的情况下让B方相信A掌握了这个知识，也有其应用场景，如数字签名。</p>
+<p>策梅洛定理属于博弈论的其中一个环节，笔者虽然没有系统学过博弈论的课程，但是对博弈论有一定的兴趣和研究。如果读者也对这些感兴趣的话，维基百科上有较为详尽的博弈论内容：</p>
+<p><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220214233837.png" alt="维基百科图"></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>策梅洛定理的探讨</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">2.6k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-02-14, 18:14:07</p>
+    <p><span class="copy-title">最后更新:</span>2022-02-15, 00:58:23</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/14/%E7%AD%96%E6%A2%85%E6%B4%9B%E5%AE%9A%E7%90%86%E7%9A%84%E6%8E%A2%E7%A9%B6/" title="策梅洛定理的探讨">https://passacaglia424.github.io/2022/02/14/%E7%AD%96%E6%A2%85%E6%B4%9B%E5%AE%9A%E7%90%86%E7%9A%84%E6%8E%A2%E7%A9%B6/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2021-至今 Passacaglia
+</p>
+<!--p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    #post {
+        background: url(/img/thanks.png);
+    }
+    
+    
+    #post .index {
+        background: url(/img/thanks.png);
+    }
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("/img/grey.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+<div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: 0; right: 0;">
+    <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 id="music_iframe"></iframe>
+</div>
+<script>
+    var music_num= new Array(
+        "1903152397",
+        "1900195292",
+        "1857852475",
+        "517239065",
+        "516991614",
+        "1363045964",
+        "478507889",
+        "27965075",
+        "1439558356",
+        "3019698");
+    var src_url="//music.163.com/outchain/player?type=2&id="+ music_num[Math.floor(Math.random() * 10)] +"&auto=1&height=66";
+    document.getElementById("music_iframe").src = src_url;
+</script>
+
+
+</html>
