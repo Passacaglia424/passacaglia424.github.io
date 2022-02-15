@@ -232,9 +232,9 @@
     <div class="friends-content">
         <ul>
             
-            <li><a target="_blank" href="https://blog.mariozzj.cn/">MarioZZJ</a></li>
+            <li><a target="_blank" href="https://blog.mariozzj.cn/">MarioZZJ&lt;-社会保险建房工程</a></li>
             
-            <li><a target="_blank" href="https://nbsps.github.io/">nbsps</a></li>
+            <li><a target="_blank" href="https://nbsps.github.io/">nbsps&lt;-网络安全大犇</a></li>
             
         </ul>
     </div>
@@ -344,17 +344,17 @@
         <span>字数:311</span>
         
         
-        <span id="busuanzi_container_page_pv">
-            阅读 :<span id="busuanzi_value_page_pv">
-                <span class="count-comment">
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
                     <span class="spinner">
                       <div class="cube1"></div>
                       <div class="cube2"></div>
                     </span>
                 </span>
-            </span>
+            </a>
         </span>
-        
         
     </div>
     
@@ -377,7 +377,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="关于本人"><a href="#关于本人" class="headerlink" title="关于本人"></a>关于本人</h4><p>本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。</p>
-<h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><p>本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮箱<a href="mailto:&#x70;&#x61;&#x73;&#115;&#x61;&#x63;&#97;&#103;&#108;&#x69;&#x61;&#x40;&#x38;&#x38;&#x2e;&#99;&#x6f;&#x6d;">&#x70;&#x61;&#x73;&#115;&#x61;&#x63;&#97;&#103;&#108;&#x69;&#x61;&#x40;&#x38;&#x38;&#x2e;&#99;&#x6f;&#x6d;</a>投稿，通常情况下都会采纳，并使用您的作者名。在此感谢为了搭建此博客而参考的所有资料的提供者。</p>
+<h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><p>本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮箱<a href="mailto:&#112;&#x61;&#115;&#x73;&#97;&#x63;&#x61;&#103;&#108;&#x69;&#97;&#x40;&#x38;&#x38;&#x2e;&#99;&#x6f;&#x6d;">&#112;&#x61;&#115;&#x73;&#97;&#x63;&#x61;&#103;&#108;&#x69;&#97;&#x40;&#x38;&#x38;&#x2e;&#99;&#x6f;&#x6d;</a>投稿，通常情况下都会采纳，并使用您的作者名。在此感谢为了搭建此博客而参考的所有资料的提供者。</p>
 <h4 id="关于平台"><a href="#关于平台" class="headerlink" title="关于平台"></a>关于平台</h4><p>本博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>上，使用的主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 在github上开源，本博客稍有修改。如果您想看到整个博客的源码，请在<a target="_blank" rel="noopener" href="https://github.com/Passacaglia424/passacaglia424.github.io">Github仓库</a>中选择master分支。<br>可用于访问本博客的域名:<a target="_blank" rel="noopener" href="https://passacaglia424.github.io,https//blog.passacaglia.cn%E3%80%82">https://passacaglia424.github.io，https://blog.passacaglia.cn。</a> </p>
 
       
@@ -387,6 +387,27 @@
 
 
 
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '08add8bcf2bc0928fef8',
+            clientSecret: '59765d5ba56668f409d84a68ae323d4e694d7fbd',
+            repo: 'passacaglia424.github.io',
+            owner: 'passacaglia424',
+            admin: ['passacaglia424'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 
@@ -444,8 +465,6 @@
         
 
         /*访问数量*/
-        
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
         
 
         /*代码高亮，行号对齐*/
@@ -631,7 +650,7 @@
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 id="music_iframe"></iframe>
 </div>
 <script>
-    var music_num= new Array(
+    var music_num=new Array(
         "1903152397",
         "1900195292",
         "1857852475",
@@ -645,6 +664,32 @@
     var src_url="//music.163.com/outchain/player?type=2&id="+ music_num[Math.floor(Math.random() * 10)] +"&auto=1&height=66";
     document.getElementById("music_iframe").src = src_url;
 </script>
-
+<script>
+    var $DOC = $(document)
+    $('#musicMouseDrag').on('mousedown', function (e) {
+      // 阻止文本选中
+      $DOC.bind("selectstart", function () {
+        return false;
+      });
+      $('#musicDragArea').css('height', '100%');
+      var $moveTarget = $('#musicMouseDrag');
+      $moveTarget.css('border', '1px dashed grey')
+      var div_x = e.pageX - $moveTarget.offset().left;
+      var div_y = e.pageY - $moveTarget.offset().top;
+      $DOC.on('mousemove', function (e) {
+        var targetX = e.pageX - div_x;
+        var targetY = e.pageY - div_y;
+        targetX = targetX < 0 ? 0 : (targetX + $moveTarget.outerWidth() >= window.innerWidth) ? window.innerWidth - $moveTarget.outerWidth() : targetX;
+        targetY = targetY < 0 ? 0 : (targetY + $moveTarget.outerHeight() >= window.innerHeight) ? window.innerHeight - $moveTarget.outerHeight() : targetY;
+        $moveTarget.css({'left': targetX + 'px', 'top': targetY + 'px', 'bottom': 'inherit', 'right': 'inherit'})
+      }).on('mouseup', function () {
+        $DOC.unbind("selectstart");
+        $DOC.off('mousemove')
+        $DOC.off('mouseup')
+        $moveTarget.css('border', 'none')
+        $('#musicDragArea').css('height', '10px');
+      })
+    })
+</script>
 
 </html>
