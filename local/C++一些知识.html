@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Git的常用指令 | Passacaglia的站点</title>
-  <meta name="keywords" content=" github , 实用工具 ">
-  <meta name="description" content="Git的常用指令 | Passacaglia的站点">
+  <title>Passacaglia的站点</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
 <meta property="og:type" content="website">
@@ -367,41 +367,22 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Git的常用指令" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">Git的常用指令</h1>
+        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="工具">工具</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color2">github</a>
-            
-            <a class="color5">实用工具</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-02 08:12:13'>2022-02-13 21:19</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-04 16:07:58'>2022-03-04 16:07</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.1k</span>
+        <span>字数:408</span>
         
         
         
@@ -420,7 +401,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87"><span class="toc-text">常见词汇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">定义的环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%8F%90%E4%BA%A4"><span class="toc-text">关于提交</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="toc-text">基本指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0"><span class="toc-text">关于参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E4%BA%AB%E4%B8%8E%E6%9B%B4%E6%96%B0%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">分享与更新类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">查看信息类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">分支操作类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E4%B8%81%E4%BF%AE%E6%94%B9%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">补丁修改类指令</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -436,52 +417,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近想系统学一下Git，而不仅仅是简单的拉取和推送。然而我查阅Git的官方文档的时候，因为懒得看英文，网页设置为谷歌自动翻译，但是”git”在英文中是混账、饭桶的意思，所以出现了啼笑生非的一幕：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220216142916.png" alt="20220216142916"><br>因此，为了使用方便（头不笑掉），这里把git常用的一些命令记录下来。建议使用最新版本。</p>
-<blockquote>
-<p>官方文档参见<a target="_blank" rel="noopener" href="https://git-scm.com/docs">Git Reference</a>，内容完整，不过可读性一般。</p>
-</blockquote>
-<h3 id="常见词汇"><a href="#常见词汇" class="headerlink" title="常见词汇"></a>常见词汇</h3><p><strong>repo</strong>:repository的简称，指代本地或远程仓库。<br><strong>工作树</strong>:一般指实际操作的目录，目录结构是树型的。<br><strong>索引(index)</strong>:也叫暂存区，逻辑结构上位于工作树和版本库之间。工作树状态提交到索引，再由索引数据添加到版本库。一般来说，当前在目录上进行改动视为在暂存区更改，只有commit后才会成为新的版本。<br><strong>分支(branch)</strong>:进行版本控制时可以有多个不同分支，互不影响，可以有多种修改。主分支为”master”。<br><strong>HEAD</strong>:指向现在使用的分支的最后一次更新，在&#x2F;git&#x2F;HEAD。<br><strong>版本</strong>：每次提交作为一个版本，每个版本都会有自己的版本信息。可视为分支上的结点。<br><strong>commit</strong>:提交，一次提交生成一个版本。<br><strong>.git</strong>:版本库目录。<br><strong>.gitignore</strong>:可以理解为”git ignore”，告诉git哪些文件不需要进行版本控制。</p>
-<h3 id="定义的环境变量"><a href="#定义的环境变量" class="headerlink" title="定义的环境变量"></a>定义的环境变量</h3><p><strong>HOME</strong>:git的全局配置位置。<br><strong>GIT_ALTERNATE_OBJECT_DIRECTORIES</strong>：告诉 Git 到哪里去找不在 GIT_OBJECT_DIRECTORY 目录中的对象。 如果你有很多项目有相同内容的大文件，这个可以用来避免存储过多备份。<br><strong>GIT_DIR</strong>：生成.git的工作目录，如果没有设置， Git 会按照目录树逐层向上查找 .git 目录，直到到达 ~ 或 &#x2F;。<br><strong>GIT_EDITOR</strong>：用户需要编辑文本时git使用的编辑器。<br><strong>GIT_EXEC_PATH</strong>:git寻找根据此路径找子程序，git –exec-path查看。<br><strong>GIT_HTTP_LOW_SPEED_LIMIT</strong>：若git网络操作在网速低于GIT_HTTP_LOW_SPEED_LIMIT字节&#x2F;秒，并且持续 GIT_HTTP_LOW_SPEED_TIME 秒以上的时间，Git 会终止这个操作。<br><strong>GIT_ICASE_PATHSPECS</strong>:让所有的路径规范忽略大小写。<br><strong>GIT_INDEX_FILE</strong>：索引文件的路径。<br><strong>GIT_NOGLOB_PATHSPECS</strong>：若设置为1，通配符将仅作为字符匹配，如*.c只匹配名为*.c的文件。<br><strong>GIT_OBJECT_DIRECTORY</strong>：对象储存目录，.git&#x2F;objects 目录的位置。<br><strong>GIT_TEMPLATE_DIR</strong>:临时目录。<br><strong>GIT_TRACE_SETUP</strong>：显示 Git 发现的关于版本库和交互环境的信息<br><strong>PREFIX</strong>：系统级别的配置。</p>
-<h4 id="关于提交"><a href="#关于提交" class="headerlink" title="关于提交"></a>关于提交</h4><p><strong>GIT_AUTHOR_NAME</strong> ：“author” 字段的可读名字。<br><strong>GIT_AUTHOR_EMAIL</strong>： “author” 字段的邮件。<br><strong>GIT_AUTHOR_DATE</strong> ： “author” 字段的时间戳。<br><strong>GIT_COMMITTER_NAME</strong> ： “committer” 字段的可读名字。<br><strong>GIT_COMMITTER_EMAIL</strong> ： “committer” 字段的邮件。<br><strong>GIT_COMMITTER_DATE</strong> ： “committer” 字段的时间戳。<br><strong>EMAIL</strong>：如果 user.email 没有配置， 就会用到此指定的邮件地址。</p>
-<h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><h4 id="关于参数"><a href="#关于参数" class="headerlink" title="关于参数"></a>关于参数</h4><p>在本文中，指令下方附带常用参数,本文用@p表示参数填入位置，参数可多选。参数前横杠规律：<br>单字母参数前一个横杠，如-a;<br>单词参数前两个横杠，如–option;<br>多单词参数最前面两横杠，单词间一横杠，如–on-contains。</p>
-<h4 id="分享与更新类指令"><a href="#分享与更新类指令" class="headerlink" title="分享与更新类指令"></a>分享与更新类指令</h4><p><strong>git init @p</strong><br>初始化命令。在当前目录(如果指定了GIT_DIR将使用此目录)创建一个空的 Git 存储库或重新初始化现有的存储库，产生.git目录作为版本库。<br>-b &lt;分支名称&gt; - 为新创建的存储库中的初始分支使用指定的名称</p>
-<p><strong>git clone [仓库url] @p [目录]</strong><br>将存储库内容克隆到本地目录，可以是远程主机的储存库。Git 支持 ssh、git、http 和 https 协议。</p>
-<pre><code class="shell">git clone https://github.com/git/git/archive/v2.17.0.tar.gz
-</code></pre>
-<p><strong>git add @p [文件或目录路径]</strong><br>将文件内容添加到暂存区中，会递归添加指定目录下所有文件，或是可以并排添加多个。添加”Documentation&#x2F;“支持正则匹配，如</p>
-<pre><code class="shell">$ git add Documentation/\*.txt
-</code></pre>
-<p>匹配目录及子目录下所有txt文件。不含’&#39;将不会搜索子目录。直接用*就是当前目录下所有文件。<br>-A 添加指定目录下所有文件，若未指定则当前目录。<br>-p 交互式地列出并询问前后版本差异，确认是否更改。（很细致）<br>-u</p>
-<p><strong>git commit @p</strong><br>创建一个提交，记录对储存库的更改。这是对储存库的更新。<br>-m 参数后接字符串作为提交的信息(为什么做这次更改)。<br>-a会将没有使用git add的文件也提交到库。</p>
-<p><strong>git config @p [配置项] [值]</strong><br>配置git使用的信息,如git config –global user.name “passacaglia”配置用户名。<br>–global 全局配置，而非仅当下储存库。</p>
-<p><strong>git push @p &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</strong><br>推送指令；提交本地仓库以更新远程仓库。<br>-u 绑定选项<br>-f 强制提交，会覆盖之前所有内容<br>比如我要上传到github，也可使用git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:&lt;用户名&gt;&#x2F;&lt;仓库名&gt;关联仓库。</p>
-<p>一般一个完整的流程是git init创建仓库,git add添加内容到暂存区,git commit提交到本地库，git push推送到远程仓库。</p>
-<p><strong>git pull @p &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</strong><br>拉取指令。获取远程仓库的内容合并到本地。</p>
-<blockquote>
-<p>注：如果分支名相同，只需要写一个，省略冒号。</p>
-</blockquote>
-<h4 id="查看信息类指令"><a href="#查看信息类指令" class="headerlink" title="查看信息类指令"></a>查看信息类指令</h4><p><strong>git diff @p</strong><br>命令比较文件的不同，即比较文件在暂存区和工作区的差异。<br>–cached 查看已缓存的改动。<br>–stat 只显示摘要<br>HEAD 查看所有的改动</p>
-<p><strong>git status @p</strong><br>查询仓库的当前状态。<br>-s 输出标记会有两列。</p>
-<p><strong>git log @p</strong><br>查看历史记录，无参数时查看过去的提交信息和版本号。<br>–online 仅显示简洁版本。<br>–reverse 倒序显示日志。<br>–graph 拓扑图选项，可以看到何时出现分支和合并。<br>–author 只查看指定作者的日志。</p>
-<h4 id="分支操作类指令"><a href="#分支操作类指令" class="headerlink" title="分支操作类指令"></a>分支操作类指令</h4><p><strong>git branch @p &lt;分支名&gt;</strong><br>列出、创造或删除分支。<br>–list：列出目前已有的分支，当前所处分支绿色高亮表示。<br>-d:删除指定的分支</p>
-<p><strong>git checkout @p &lt;分支名&gt;</strong><br>切换分支或恢复工作树文件。</p>
-<pre><code class="shell">git checkout master //切换到master分支
-</code></pre>
-<p>-b &lt;分支名&gt; 创建一个本地分支并切换 </p>
-<p><strong>git merge &lt;分支名&gt;</strong><br>从分支的分歧开始，将两个或多个开发历史合并在一起。将指定分支合并到HEAD指定的分支。</p>
-<blockquote>
-<p>快进合并(Fast-Forward)：通常的合并方式如图：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220223225152.png" alt="20220223225152"><br>快进合并后原有的两条分支在逻辑上合成一条，就像快进了一样。比如topic合并到master后，只剩下D-E-F-G-H-A-B-C，但是HEAD位置仍在原位置。</p>
-</blockquote>
-<p><strong>git rebase</strong><br>快速合并分支，当从分支B融合到A上时，直接删除分支B，将分支B与A分歧的部分直接添加在A后面。</p>
-<h4 id="补丁修改类指令"><a href="#补丁修改类指令" class="headerlink" title="补丁修改类指令"></a>补丁修改类指令</h4><p><strong>git revert &lt;版本号&gt;</strong><br>通过提交一个新的版本，在这个版本中撤消过去某个版本A所做的变化，来达到删除A的影响的目的。</p>
-<blockquote>
-<p><strong>注</strong>：&lt;版本号&gt;内容为HEAD时，指当前版本；HEAD^为上次,HEAD^^为上上次，以此类推。也可以用HEAD~n表示当前版本以前n个版本。</p>
-</blockquote>
-<p><strong>git reset @p &lt;版本号&gt;</strong><br>从当前位置A回退到之前的某个版本B。<br>–hard 回退到指定版本号，期间的版本全部丢弃。<br>–soft 回退到之前的指定版本。</p>
-<blockquote>
-<p><strong>注</strong>:由于回退后本地版本库可能会比远程库旧，下一次git push时需添加-f选项强制执行。</p>
-</blockquote>
-<p>常用的大概就这些，日后需要再添加。版本管理是一件值得做的事，一旦版本多了再管理就会很混乱。</p>
+        <p>拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。<br>合成拷贝构造函数？<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png" alt="20220304144655"></p>
+<p>explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。</p>
+<p>拷贝赋值运算符：没指定编译器也会指定<br>移动构造函数<br>移动赋值运算符<br>析构函数：没指定编译器也会指定；<br>隐式销毁一个指针类型不会销毁其指向的对象（内存泄漏？),智能指针是类类型，所以会。<br>如果一个类需要自定义析构函数，那么几乎可以肯定需要自定义拷贝构造函数和拷贝赋值运算符。</p>
+<p>直接初始化：一对小括号加参数。拷贝初始化：等号右侧对象拷贝到正在创建的对象中，如果需要还需进行类型转换(拷贝初始化没有&#x3D;号的情况：将一个对象作为实参传递给一个非引用类型的形参时、从一个返回类型非引用类型的函数返回一个对象、用花括号初始化列表初始化一个数组的元素或一个聚合类的成员)</p>
+<p>&#x3D;default<br>&#x3D;delete  不希望定义这类成员(如阻止拷贝函数拷贝，但如果删除析构函数，将不能再构造了)<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304160615.png" alt="20220304160615"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
@@ -489,18 +429,6 @@
 </article>
 
 
-
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Git的常用指令</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">2.1k</span></p>
-    <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-02-13, 21:19:34</p>
-    <p><span class="copy-title">最后更新:</span>2022-03-02, 08:12:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/13/Git%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="Git的常用指令">https://passacaglia424.github.io/2022/02/13/Git%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
-    </p>
-</div>
 
 
 

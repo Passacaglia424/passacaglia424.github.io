@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Git的常用指令 | Passacaglia的站点</title>
-  <meta name="keywords" content=" github , 实用工具 ">
-  <meta name="description" content="Git的常用指令 | Passacaglia的站点">
+  <title>Rust学习笔记（基础篇） | Passacaglia的站点</title>
+  <meta name="keywords" content=" Rust , 编程语言 ">
+  <meta name="description" content="Rust学习笔记（基础篇） | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
 <meta property="og:type" content="website">
@@ -367,9 +367,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Git的常用指令" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Rust学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Git的常用指令</h1>
+        <h1 class="article-title">Rust学习笔记（基础篇）</h1>
     
     <div class="article-meta">
         
@@ -379,7 +379,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="工具">工具</a>
+            <a  data-rel="后端">后端</a>
             
         </span>
         
@@ -387,21 +387,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">github</a>
+            <a class="color5">Rust</a>
             
-            <a class="color5">实用工具</a>
+            <a class="color5">编程语言</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-02 08:12:13'>2022-02-13 21:19</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-08 22:22:41'>2022-03-02 07:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.1k</span>
+        <span>字数:2.6k</span>
         
         
         
@@ -420,7 +420,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87"><span class="toc-text">常见词汇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">定义的环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%8F%90%E4%BA%A4"><span class="toc-text">关于提交</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="toc-text">基本指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0"><span class="toc-text">关于参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E4%BA%AB%E4%B8%8E%E6%9B%B4%E6%96%B0%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">分享与更新类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">查看信息类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">分支操作类指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E4%B8%81%E4%BF%AE%E6%94%B9%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">补丁修改类指令</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">可在项目下使用的其他命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%9A%E7%94%A8%E7%9A%84%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="toc-text">1.通用的编程概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%97%8F-shadowing"><span class="toc-text">隐藏(shadowing)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1%E6%A0%87%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.1标量数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2%E5%A4%8D%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.2复合数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.3集合数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashMap"><span class="toc-text">HashMap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">1.2控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">1.2.1控制语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">1.2.2错误处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF"><span class="toc-text">不可恢复错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">可恢复的错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E9%94%99%E8%AF%AF"><span class="toc-text">传播错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">1.3占位符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rust%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6"><span class="toc-text">Rust核心机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E6%9C%89%E6%9D%83%E6%9C%BA%E5%88%B6%E2%98%86"><span class="toc-text">所有权机制☆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%B8%AD%E6%89%80%E6%9C%89%E6%9D%83%E5%8F%98%E5%8C%96"><span class="toc-text">函数中所有权变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F"><span class="toc-text">模块系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Package"><span class="toc-text">Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Crate"><span class="toc-text">Crate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Module"><span class="toc-text">Module</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Path"><span class="toc-text">Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#use%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">use的使用</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -436,52 +436,128 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近想系统学一下Git，而不仅仅是简单的拉取和推送。然而我查阅Git的官方文档的时候，因为懒得看英文，网页设置为谷歌自动翻译，但是”git”在英文中是混账、饭桶的意思，所以出现了啼笑生非的一幕：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220216142916.png" alt="20220216142916"><br>因此，为了使用方便（头不笑掉），这里把git常用的一些命令记录下来。建议使用最新版本。</p>
+        <center>Rust真是一个学习友好型语言，官方教程很全面！</center>
+<p align="right">————序</p>
+
 <blockquote>
-<p>官方文档参见<a target="_blank" rel="noopener" href="https://git-scm.com/docs">Git Reference</a>，内容完整，不过可读性一般。</p>
+<p>注：由于学习时使用的是Windows 10系统，所以以下内容仅保证适用于windows系统，Linux系统下可能有微小差别。语法有点像简化版C++，有自己很多独特机制。<br>学习参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hp4y1k7SV?p=36">https://www.bilibili.com/video/BV1hp4y1k7SV?p=36</a></p>
 </blockquote>
-<h3 id="常见词汇"><a href="#常见词汇" class="headerlink" title="常见词汇"></a>常见词汇</h3><p><strong>repo</strong>:repository的简称，指代本地或远程仓库。<br><strong>工作树</strong>:一般指实际操作的目录，目录结构是树型的。<br><strong>索引(index)</strong>:也叫暂存区，逻辑结构上位于工作树和版本库之间。工作树状态提交到索引，再由索引数据添加到版本库。一般来说，当前在目录上进行改动视为在暂存区更改，只有commit后才会成为新的版本。<br><strong>分支(branch)</strong>:进行版本控制时可以有多个不同分支，互不影响，可以有多种修改。主分支为”master”。<br><strong>HEAD</strong>:指向现在使用的分支的最后一次更新，在&#x2F;git&#x2F;HEAD。<br><strong>版本</strong>：每次提交作为一个版本，每个版本都会有自己的版本信息。可视为分支上的结点。<br><strong>commit</strong>:提交，一次提交生成一个版本。<br><strong>.git</strong>:版本库目录。<br><strong>.gitignore</strong>:可以理解为”git ignore”，告诉git哪些文件不需要进行版本控制。</p>
-<h3 id="定义的环境变量"><a href="#定义的环境变量" class="headerlink" title="定义的环境变量"></a>定义的环境变量</h3><p><strong>HOME</strong>:git的全局配置位置。<br><strong>GIT_ALTERNATE_OBJECT_DIRECTORIES</strong>：告诉 Git 到哪里去找不在 GIT_OBJECT_DIRECTORY 目录中的对象。 如果你有很多项目有相同内容的大文件，这个可以用来避免存储过多备份。<br><strong>GIT_DIR</strong>：生成.git的工作目录，如果没有设置， Git 会按照目录树逐层向上查找 .git 目录，直到到达 ~ 或 &#x2F;。<br><strong>GIT_EDITOR</strong>：用户需要编辑文本时git使用的编辑器。<br><strong>GIT_EXEC_PATH</strong>:git寻找根据此路径找子程序，git –exec-path查看。<br><strong>GIT_HTTP_LOW_SPEED_LIMIT</strong>：若git网络操作在网速低于GIT_HTTP_LOW_SPEED_LIMIT字节&#x2F;秒，并且持续 GIT_HTTP_LOW_SPEED_TIME 秒以上的时间，Git 会终止这个操作。<br><strong>GIT_ICASE_PATHSPECS</strong>:让所有的路径规范忽略大小写。<br><strong>GIT_INDEX_FILE</strong>：索引文件的路径。<br><strong>GIT_NOGLOB_PATHSPECS</strong>：若设置为1，通配符将仅作为字符匹配，如*.c只匹配名为*.c的文件。<br><strong>GIT_OBJECT_DIRECTORY</strong>：对象储存目录，.git&#x2F;objects 目录的位置。<br><strong>GIT_TEMPLATE_DIR</strong>:临时目录。<br><strong>GIT_TRACE_SETUP</strong>：显示 Git 发现的关于版本库和交互环境的信息<br><strong>PREFIX</strong>：系统级别的配置。</p>
-<h4 id="关于提交"><a href="#关于提交" class="headerlink" title="关于提交"></a>关于提交</h4><p><strong>GIT_AUTHOR_NAME</strong> ：“author” 字段的可读名字。<br><strong>GIT_AUTHOR_EMAIL</strong>： “author” 字段的邮件。<br><strong>GIT_AUTHOR_DATE</strong> ： “author” 字段的时间戳。<br><strong>GIT_COMMITTER_NAME</strong> ： “committer” 字段的可读名字。<br><strong>GIT_COMMITTER_EMAIL</strong> ： “committer” 字段的邮件。<br><strong>GIT_COMMITTER_DATE</strong> ： “committer” 字段的时间戳。<br><strong>EMAIL</strong>：如果 user.email 没有配置， 就会用到此指定的邮件地址。</p>
-<h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><h4 id="关于参数"><a href="#关于参数" class="headerlink" title="关于参数"></a>关于参数</h4><p>在本文中，指令下方附带常用参数,本文用@p表示参数填入位置，参数可多选。参数前横杠规律：<br>单字母参数前一个横杠，如-a;<br>单词参数前两个横杠，如–option;<br>多单词参数最前面两横杠，单词间一横杠，如–on-contains。</p>
-<h4 id="分享与更新类指令"><a href="#分享与更新类指令" class="headerlink" title="分享与更新类指令"></a>分享与更新类指令</h4><p><strong>git init @p</strong><br>初始化命令。在当前目录(如果指定了GIT_DIR将使用此目录)创建一个空的 Git 存储库或重新初始化现有的存储库，产生.git目录作为版本库。<br>-b &lt;分支名称&gt; - 为新创建的存储库中的初始分支使用指定的名称</p>
-<p><strong>git clone [仓库url] @p [目录]</strong><br>将存储库内容克隆到本地目录，可以是远程主机的储存库。Git 支持 ssh、git、http 和 https 协议。</p>
-<pre><code class="shell">git clone https://github.com/git/git/archive/v2.17.0.tar.gz
+<p>文件命名规范：文件名若有单词，中间加下划线，如hello_world.rs。<br>常量命名规范：全大写字母。<br>函数名名规范：小写字母，单词间下划线分开。Rust函数可定义在main函数后。</p>
+<p>Rust的main函数没有参数，没有返回。fn main{}。</p>
+<p>Rust marco(宏)，会在宏名称后面加’!’。Rust的缩进是四个空格，而不是tab键。</p>
+<p>Rust是“ahead of time”(预先编译)的语言，编译成功直接生成二进制文件，在windows下还会额外生成一个.pdb的调试文件。</p>
+<h3 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h3><p>cargo有官方中文文档:<a target="_blank" rel="noopener" href="https://cargo.budshome.com/index.html">https://cargo.budshome.com/index.html</a><br>使用包管理器cargo创建(安装Rust时自带，无需额外安装)。<br>命令: cargo new &lt;项目名&gt; 在当前路径下生成项目。</p>
+<p>项目内可能存在的文件含义：<br>Cargo.toml 项目配置文件<br>.gitignore 用于git<br>Cargo.lock 关于依赖项的信息。</p>
+<h4 id="可在项目下使用的其他命令"><a href="#可在项目下使用的其他命令" class="headerlink" title="可在项目下使用的其他命令"></a>可在项目下使用的其他命令</h4><p>cargo build 构建项目<br>cargo run 编译运行代码<br>cargo check 只检查代码能通过编译，但不生成可执行文件。<br>cargo update 按照Cargo.lock更新依赖</p>
+<p>引用库use</p>
+<h2 id="1-通用的编程概念"><a href="#1-通用的编程概念" class="headerlink" title="1.通用的编程概念"></a>1.通用的编程概念</h2><h5 id="隐藏-shadowing"><a href="#隐藏-shadowing" class="headerlink" title="隐藏(shadowing)"></a>隐藏(shadowing)</h5><p>使用let可以给之前的同名变量声明新的变量，新的变量会隐藏之前的同名变量。<br>如:</p>
+<pre><code class="rust">let x=5;
+let x=x+1;
 </code></pre>
-<p><strong>git add @p [文件或目录路径]</strong><br>将文件内容添加到暂存区中，会递归添加指定目录下所有文件，或是可以并排添加多个。添加”Documentation&#x2F;“支持正则匹配，如</p>
-<pre><code class="shell">$ git add Documentation/\*.txt
+<h3 id="1-1数据类型"><a href="#1-1数据类型" class="headerlink" title="1.1数据类型"></a>1.1数据类型</h3><h4 id="1-1-1标量数据类型"><a href="#1-1-1标量数据类型" class="headerlink" title="1.1.1标量数据类型"></a>1.1.1标量数据类型</h4><p>u32:32位的无符号整型。范围-(2^n-1)<del>2^n-1。<br>i32:32位的有符号整型。范围0-2^n-1，为默认类型。<br>u&#x2F;i8、u&#x2F;i16,u&#x2F;i64,u&#x2F;i128同理，数字为位数大小。<br>isize&#x2F;usize:由计算机架构决定大小，如64位系统就是64。<br>f32:32位浮点数类型。<br>f64:64位浮点数类型，为默认类型。<br>bool:值为true&#x2F;false。<br>char:4字节，使用unicode标量值。范围U+0000</del> U+D7FF,U+E000 ~U+10FFFF</p>
+<h4 id="1-1-2复合数据类型"><a href="#1-1-2复合数据类型" class="headerlink" title="1.1.2复合数据类型"></a>1.1.2复合数据类型</h4><p>Tuple:元组，圆括号声明，具有固定长度。类似python。</p>
+<pre><code class="rust"> let tup: (i32, f64, u8) = (500, 6.4, 1);//声明一个三元素元组。
 </code></pre>
-<p>匹配目录及子目录下所有txt文件。不含’&#39;将不会搜索子目录。直接用*就是当前目录下所有文件。<br>-A 添加指定目录下所有文件，若未指定则当前目录。<br>-p 交互式地列出并询问前后版本差异，确认是否更改。（很细致）<br>-u</p>
-<p><strong>git commit @p</strong><br>创建一个提交，记录对储存库的更改。这是对储存库的更新。<br>-m 参数后接字符串作为提交的信息(为什么做这次更改)。<br>-a会将没有使用git add的文件也提交到库。</p>
-<p><strong>git config @p [配置项] [值]</strong><br>配置git使用的信息,如git config –global user.name “passacaglia”配置用户名。<br>–global 全局配置，而非仅当下储存库。</p>
-<p><strong>git push @p &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</strong><br>推送指令；提交本地仓库以更新远程仓库。<br>-u 绑定选项<br>-f 强制提交，会覆盖之前所有内容<br>比如我要上传到github，也可使用git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:&lt;用户名&gt;&#x2F;&lt;仓库名&gt;关联仓库。</p>
-<p>一般一个完整的流程是git init创建仓库,git add添加内容到暂存区,git commit提交到本地库，git push推送到远程仓库。</p>
-<p><strong>git pull @p &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</strong><br>拉取指令。获取远程仓库的内容合并到本地。</p>
-<blockquote>
-<p>注：如果分支名相同，只需要写一个，省略冒号。</p>
-</blockquote>
-<h4 id="查看信息类指令"><a href="#查看信息类指令" class="headerlink" title="查看信息类指令"></a>查看信息类指令</h4><p><strong>git diff @p</strong><br>命令比较文件的不同，即比较文件在暂存区和工作区的差异。<br>–cached 查看已缓存的改动。<br>–stat 只显示摘要<br>HEAD 查看所有的改动</p>
-<p><strong>git status @p</strong><br>查询仓库的当前状态。<br>-s 输出标记会有两列。</p>
-<p><strong>git log @p</strong><br>查看历史记录，无参数时查看过去的提交信息和版本号。<br>–online 仅显示简洁版本。<br>–reverse 倒序显示日志。<br>–graph 拓扑图选项，可以看到何时出现分支和合并。<br>–author 只查看指定作者的日志。</p>
-<h4 id="分支操作类指令"><a href="#分支操作类指令" class="headerlink" title="分支操作类指令"></a>分支操作类指令</h4><p><strong>git branch @p &lt;分支名&gt;</strong><br>列出、创造或删除分支。<br>–list：列出目前已有的分支，当前所处分支绿色高亮表示。<br>-d:删除指定的分支</p>
-<p><strong>git checkout @p &lt;分支名&gt;</strong><br>切换分支或恢复工作树文件。</p>
-<pre><code class="shell">git checkout master //切换到master分支
+<p>数组：分配在堆栈上。类似js。rust不允许访问超出索引的内存。</p>
+<pre><code class="rust">let a = [1, 2, 3, 4, 5];
+let a:[i32;5] = [1, 2, 3, 4, 5];
+let a = [3;5];//分配了5个元素，都是3。
 </code></pre>
-<p>-b &lt;分支名&gt; 创建一个本地分支并切换 </p>
-<p><strong>git merge &lt;分支名&gt;</strong><br>从分支的分歧开始，将两个或多个开发历史合并在一起。将指定分支合并到HEAD指定的分支。</p>
-<blockquote>
-<p>快进合并(Fast-Forward)：通常的合并方式如图：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220223225152.png" alt="20220223225152"><br>快进合并后原有的两条分支在逻辑上合成一条，就像快进了一样。比如topic合并到master后，只剩下D-E-F-G-H-A-B-C，但是HEAD位置仍在原位置。</p>
-</blockquote>
-<p><strong>git rebase</strong><br>快速合并分支，当从分支B融合到A上时，直接删除分支B，将分支B与A分歧的部分直接添加在A后面。</p>
-<h4 id="补丁修改类指令"><a href="#补丁修改类指令" class="headerlink" title="补丁修改类指令"></a>补丁修改类指令</h4><p><strong>git revert &lt;版本号&gt;</strong><br>通过提交一个新的版本，在这个版本中撤消过去某个版本A所做的变化，来达到删除A的影响的目的。</p>
-<blockquote>
-<p><strong>注</strong>：&lt;版本号&gt;内容为HEAD时，指当前版本；HEAD^为上次,HEAD^^为上上次，以此类推。也可以用HEAD~n表示当前版本以前n个版本。</p>
-</blockquote>
-<p><strong>git reset @p &lt;版本号&gt;</strong><br>从当前位置A回退到之前的某个版本B。<br>–hard 回退到指定版本号，期间的版本全部丢弃。<br>–soft 回退到之前的指定版本。</p>
-<blockquote>
-<p><strong>注</strong>:由于回退后本地版本库可能会比远程库旧，下一次git push时需添加-f选项强制执行。</p>
-</blockquote>
-<p>常用的大概就这些，日后需要再添加。版本管理是一件值得做的事，一旦版本多了再管理就会很混乱。</p>
+<p>结构体</p>
+<pre><code class="rust">struct Rectangle&#123;
+    width:u32;
+    height:u32;
+&#125;
+let rect= Rectangle&#123;
+    width:32,
+    height:40,
+&#125;;//赋值
+</code></pre>
+<p>enum枚举，值只能是其中之一。<br>结构体、枚举类型中可定义方法。访问成员 枚举名::成员名</p>
+<pre><code class="rust">impl Rectangle&#123;
+    fn area(&amp;self)-&gt;u32&#123;
+        self.width=self.length;
+    &#125;
+&#125;
+</code></pre>
+<p>rust中没有-&gt;运算符，会自动引用和解引用。</p>
+<h4 id="1-1-3集合数据类型"><a href="#1-1-3集合数据类型" class="headerlink" title="1.1.3集合数据类型"></a>1.1.3集合数据类型</h4><p>标准库定义的数据类型，储存在堆上。</p>
+<h5 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h5><p>写法Vec<T>。创建方式有：</T></p>
+<pre><code class="rust">let v:Vec&lt;i32&gt;=Vec::new();
+let vec![1,2,3];
+/*与枚举的结合，实现储存不同数据*/
+enum Cell&#123;
+    Int(i32);
+    Float(f64);
+    Text(String);
+&#125;
+let v=vec![Cell::Int(3),Text(String::from(&quot;hello))];
+</code></pre>
+<p>操作：</p>
+<pre><code class="rust">v.push(4);//添加元素。
+v.get(2);//获得引用。或者使用下标索引也是引用。
+</code></pre>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p>这是来自标准库的类型，除此之外还有&amp;str、OsString、CString、CStr等类似的字符串类型。Rust不允许对String进行索引，但允许按照字形簇的索引边界进行切割。</p>
+<pre><code class="rust">let mut s=String::from(&quot;foo&quot;);
+s.push_str(&quot;bar&quot;);//添加字符串到之后，该方法不会获得所有权。
+s.push(&#39;s&#39;);//添加单个字符
+let s=format!(&quot;&#123;&#125;-&#123;&#125;&quot;,s,x);//用宏拼接s和x字符串，不会获得所有权。
+for (k,v) in &amp;s&#123;//遍历
+    println!(&quot;&#123;&#125;&#123;&#125;&quot;,k,v);
+&#125;
+//split_whitespace方法：按空格分割字符串
+</code></pre>
+<p>+号也可以连接字符串，不能两个字符串直接相加，需要其中一个是引用形式，会将其转化为字符串切片。不引用的会失效。<br>字符串切片：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220306170931.png" alt="20220306170931"><br>被切片引用的字符串禁止修改值。<br>字形簇：真正接近人类语言的表示，一个个真正的字符。</p>
+<h5 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h5><p>哈希表，用键值对的方式储存HashMap&lt;K,V&gt;。不是预导入类型。K,V分别必须是同一类型。<br>预导入：不需要额外use，直接就可使用。</p>
+<pre><code class="rust">let mut hp=HashMap::new();
+hp.insert(3，5);//编译器可以推断出K,V的类型了。
+/*通过元素类型为元组的vector加collect()方法来生成HashMap。*/
+let v=vec![1,2];
+let w=vec![3,4];
+let s:HashMap&lt;_,_&gt;=v.iter().zip(w.iter()).collect();
+s.entry(30).or_insert(88);//如果没有K=30的值，插入30,88，否则不插入
+/*or_insert()返回值:K存在返回对应V的可变引用；不存在就插进去再返回这个可变引用。*/
+</code></pre>
+<h3 id="1-2控制流"><a href="#1-2控制流" class="headerlink" title="1.2控制流"></a>1.2控制流</h3><h4 id="1-2-1控制语句"><a href="#1-2-1控制语句" class="headerlink" title="1.2.1控制语句"></a>1.2.1控制语句</h4><p>判断if&#x2F;else if&#x2F;else,判断表达式不加括号。<br>可用于作为变量条件声明，但是要求返回类型相等。</p>
+<pre><code class="rust">let number = if true &#123;5&#125; else &#123;6&#125;;
+</code></pre>
+<p>无限循环loop，break退出。条件循环while，判断表达式也不加括号。<br>范围循环for … in … 类似python。设置(1..4)可表示1-3的范围，.rev()反向。<br>模式匹配match,举例(绑定值的模式匹配):</p>
+<pre><code class="rust">match Coin&#123;
+    Coin:dollar=&gt;1,
+    Coin:yuan=&gt;4,
+    Coin:Quarter=&gt;(state)&#123;
+        println!&#123;&quot;Hello &#123;:?&#125;&quot;,state&#125;;
+        25
+    &#125;
+&#125;
+</code></pre>
+<p><em>通配符为其余情况,()表示什么都没发生。rust强制要求处理所有情况，可用</em>&#x3D;&gt;()</p>
+<h4 id="1-2-2错误处理"><a href="#1-2-2错误处理" class="headerlink" title="1.2.2错误处理"></a>1.2.2错误处理</h4><h5 id="不可恢复错误"><a href="#不可恢复错误" class="headerlink" title="不可恢复错误"></a>不可恢复错误</h5><p>执行panic!宏，默认展开清理调用栈，或选择不清理直接退出程序:在cargo.toml中设置panic&#x3D;’abort’。<br>cargo build&#x2F;run中不带–release参数会带有调试信息。</p>
+<h5 id="可恢复的错误"><a href="#可恢复的错误" class="headerlink" title="可恢复的错误"></a>可恢复的错误</h5><p>Result枚举类来处理错误，这类错误类似java里的异常。可通过结合match表达式处理错误，也可以用闭包。</p>
+<pre><code class="rust">enum Result&lt;T, E&gt; &#123;
+    Ok(T),//操作成功Ok变体返回T类型
+    Err(E),//操作失败Ok变体返回E类型
+&#125;
+</code></pre>
+<p>.unwrap()方法：match的快捷方法，如果Ok返回值，如果Err调用panic!。<br>.expect()方法可以自定义错误信息。</p>
+<h5 id="传播错误"><a href="#传播错误" class="headerlink" title="传播错误"></a>传播错误</h5><p>比如函数返回值为Result&lt;String,io:Error&gt;，将错误抛回调用者。<br>?运算符：在返回值为Result的函数后面加?，也能起到返回错误的作用。实际上隐式调用了from函数。</p>
+<h3 id="1-3占位符"><a href="#1-3占位符" class="headerlink" title="1.3占位符"></a>1.3占位符</h3><p>{}<br>{:?}<br>{:#?}</p>
+<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型实际上是含有占位符的模板，参考C++。编译时将占位符换成具体的类型参数。<br>如:</p>
+<pre><code class="rust">fn largest&lt;T&gt;(list:&amp;T)-&gt;T&#123;...&#125; //函数中的泛型
+</code></pre>
+<h2 id="Rust核心机制"><a href="#Rust核心机制" class="headerlink" title="Rust核心机制"></a>Rust核心机制</h2><p>Rust的核心机制。储存在stack上的数据必须有固定的大小，也就是copy trait的，编译时大小未知或运行时大小变化的数据存在heap上。<br>元组内的都是copy trait的，那么它本身也是。</p>
+<h3 id="所有权机制☆"><a href="#所有权机制☆" class="headerlink" title="所有权机制☆"></a>所有权机制☆</h3><h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><strong>引用</strong>：允许你使用某些值而不取得其所有权，因为<strong>Rust中变量一旦离开其所有权，就会失效</strong>。用&amp;表示。除此之外，直接赋值或调用.move()，会导致所有权转移，使用.clone(),相当于生成一个新的同样值的对象。.get()可以获得引用。<br><strong>可变引用</strong>：&amp;mnt [变量] 方式,函数中可变引用作参数，实参也需要可变。<br><strong>引用的作用域</strong>：从声明到最后一次使用。<br>Rust中，编译器可以保证引用永远不会是悬空引用，即不会指向的内容已提前被释放。<br>任意时刻只能满足之一：①一个可变引用 ②任意个不可变引用。也就是说，一个变量在其作用域内不能同时有可变和不可变的引用。<br><strong>pub关键字</strong>：公有的。对enum设置pub,里面都是pub的。而struct是pub，里面不一定是pub,mod也是。</p>
+<h4 id="函数中所有权变化"><a href="#函数中所有权变化" class="headerlink" title="函数中所有权变化"></a>函数中所有权变化</h4><p>如果是基本数据类型，进入函数时不失去所有权；堆中的变量进入函数会失去所有权，因此若需要保留，则应该引用传参。<br>被当作函数返回值的变量所有权将会被移动出函数并返回到调用函数的地方，而不会直接被无效释放。</p>
+<p>借用</p>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>按层级划分：</p>
+<h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><p>包。有Cargo的特性，测试、共享、构建crate。<br>包含一个Cargo.toml,描述如何构建crate。只能包含0-1个library crate，但可以包含任意个binary crate。binary crate放在src&#x2F;bin目录下。<br>Cargo.toml可添加引用外部包。std属于外部包但不用添加引用，但是使用时还需要use。</p>
+<h4 id="Crate"><a href="#Crate" class="headerlink" title="Crate"></a>Crate</h4><p>单元包。一个模块树，可产生一个library或可执行文件。<br>分为binary crate和library crate。<br><strong>src&#x2F;main.rs</strong>:binary crate的crate root。Rust编译器从这里开始组成crate的根module。<br><strong>src&#x2F;lib.rs</strong>:library crate的crate root。</p>
+<h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>模块，定义在文件中。使用mod关键词创建，可嵌套。<br>模块可以定义<strong>私有边界</strong>，Rust中所有变量，结构体、模块、函数等都默认是私有的。父模块无法访问子模块条目，但子模块可以访问祖先的。<br>如果模块名后跟”;”而非代码块，那么指在此文件名中定义了模块。如在文件A.rs中定义了mod B;那么实际在src&#x2F;A&#x2F;B.rs。(此A为目录名)</p>
+<h4 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h4><p>为了在模块中找到某个条目而使用。<br>-绝对路径：从crate root开始，使用crate名或字面值crate。<br>-相对路径：当前模块开始，使用self、super或当前模块标识符。</p>
+<h4 id="use的使用"><a href="#use的使用" class="headerlink" title="use的使用"></a>use的使用</h4><p>pub use<br><strong>嵌套路径</strong>：一次引用多个来自相同的部分:</p>
+<pre><code class="rust">use std::io::&#123;self,write&#125;
+</code></pre>
+<p>self表示自身，另外也可使用通配符*。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
@@ -491,12 +567,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Git的常用指令</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">2.1k</span></p>
+    <p><span class="copy-title">文章标题:</span>Rust学习笔记（基础篇）</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">2.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-02-13, 21:19:34</p>
-    <p><span class="copy-title">最后更新:</span>2022-03-02, 08:12:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/13/Git%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="Git的常用指令">https://passacaglia424.github.io/2022/02/13/Git%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</a>
+    <p><span class="copy-title">发布时间:</span>2022-03-02, 07:47:44</p>
+    <p><span class="copy-title">最后更新:</span>2022-03-08, 22:22:41</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Rust学习笔记（基础篇）">https://passacaglia424.github.io/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
