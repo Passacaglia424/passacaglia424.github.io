@@ -6,20 +6,17 @@
   <meta name="keywords" content=" Rust , 编程语言 ">
   <meta name="description" content="Rust学习笔记（基础篇） | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
+<meta name="description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Passacaglia的站点">
-<meta property="og:url" content="https://passacaglia424.github.io/local/C++%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86.html">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://passacaglia424.github.io/about/index.html">
 <meta property="og:site_name" content="Passacaglia的站点">
-<meta property="og:description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
+<meta property="og:description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
-<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304160615.png">
-<meta property="article:published_time" content="2022-03-04T08:07:58.218Z">
-<meta property="article:modified_time" content="2022-03-04T08:07:58.218Z">
+<meta property="article:published_time" content="2022-02-16T14:23:58.248Z">
+<meta property="article:modified_time" content="2022-02-16T14:23:58.248Z">
 <meta property="article:author" content="Passacaglia">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
 
 
 <link rel="icon" href="/img/headportrait.png">
@@ -155,7 +152,7 @@
     <li>
         <div class="all active" data-rel="全部内容">全部内容
             
-                <small>(4)</small>
+                <small>(5)</small>
             
         </div>
     </li>
@@ -194,7 +191,7 @@
                     <div data-rel="杂谈">
                         
                         杂谈
-                        <small>(1)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -222,8 +219,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="4">
-<input type="hidden" id="yelog_site_word_count" value="8.8k">
+<input type="hidden" id="yelog_site_posts_number" value="5">
+<input type="hidden" id="yelog_site_word_count" value="15.6k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -279,6 +276,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>党员</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>定理</a>
             </li>
         
@@ -316,6 +317,14 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        <a  class="全部内容 杂谈 "
+           href="/2022/03/17/%E5%85%9A%E7%AB%A0%E5%AD%A6%E4%B9%A0/"
+           data-tag="党员"
+           data-author="" >
+            <span class="post-title" title="党章学习">党章学习</span>
+            <span class="post-date" title="2022-03-17 11:47:50">2022/03/17</span>
+        </a>
         
         <a  class="全部内容 工具 "
            href="/2022/03/04/vim%E6%98%A0%E5%B0%84%E4%BF%AE%E6%94%B9&vscoderemote%E9%85%8D%E7%BD%AE/"
@@ -396,12 +405,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-08 22:22:41'>2022-03-02 07:47</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-14 17:08:02'>2022-03-02 07:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.6k</span>
+        <span>字数:2.8k</span>
         
         
         
@@ -420,7 +429,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">可在项目下使用的其他命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%9A%E7%94%A8%E7%9A%84%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="toc-text">1.通用的编程概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%97%8F-shadowing"><span class="toc-text">隐藏(shadowing)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1%E6%A0%87%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.1标量数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2%E5%A4%8D%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.2复合数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.3集合数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashMap"><span class="toc-text">HashMap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">1.2控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">1.2.1控制语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">1.2.2错误处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF"><span class="toc-text">不可恢复错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">可恢复的错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E9%94%99%E8%AF%AF"><span class="toc-text">传播错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">1.3占位符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rust%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6"><span class="toc-text">Rust核心机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E6%9C%89%E6%9D%83%E6%9C%BA%E5%88%B6%E2%98%86"><span class="toc-text">所有权机制☆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%B8%AD%E6%89%80%E6%9C%89%E6%9D%83%E5%8F%98%E5%8C%96"><span class="toc-text">函数中所有权变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F"><span class="toc-text">模块系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Package"><span class="toc-text">Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Crate"><span class="toc-text">Crate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Module"><span class="toc-text">Module</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Path"><span class="toc-text">Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#use%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">use的使用</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">可在项目下使用的其他命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Package"><span class="toc-text">Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Crate"><span class="toc-text">Crate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Module"><span class="toc-text">Module</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Path"><span class="toc-text">Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#use%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">use的使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%9A%E7%94%A8%E7%9A%84%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="toc-text">1.通用的编程概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%97%8F-shadowing"><span class="toc-text">隐藏(shadowing)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1%E6%A0%87%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.1标量数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2%E5%A4%8D%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.2复合数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.3集合数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashMap"><span class="toc-text">HashMap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">1.2控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">1.2.1控制语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">1.2.2错误处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF"><span class="toc-text">不可恢复错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">可恢复的错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E9%94%99%E8%AF%AF"><span class="toc-text">传播错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">1.3占位符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Rust%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6"><span class="toc-text">2.Rust核心机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E6%89%80%E6%9C%89%E6%9D%83%E6%9C%BA%E5%88%B6%E2%98%86"><span class="toc-text">2.1所有权机制☆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1%E5%BC%95%E7%94%A8"><span class="toc-text">2.1.1引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2%E5%87%BD%E6%95%B0%E4%B8%AD%E6%89%80%E6%9C%89%E6%9D%83%E5%8F%98%E5%8C%96"><span class="toc-text">2.1.2函数中所有权变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">2.2生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3Trait"><span class="toc-text">2.3Trait</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -440,7 +449,7 @@
 <p align="right">————序</p>
 
 <blockquote>
-<p>注：由于学习时使用的是Windows 10系统，所以以下内容仅保证适用于windows系统，Linux系统下可能有微小差别。语法有点像简化版C++，有自己很多独特机制。<br>学习参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hp4y1k7SV?p=36">https://www.bilibili.com/video/BV1hp4y1k7SV?p=36</a></p>
+<p>注：由于学习时使用的是Windows 10系统，所以以下内容仅保证适用于windows系统，Linux系统下可能有微小差别。语法有点像简化版C++，有自己很多独特机制。Rust虽然官方教程友好，但是不适合作为入门语言。<br>学习参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hp4y1k7SV?p=36">https://www.bilibili.com/video/BV1hp4y1k7SV?p=36</a></p>
 </blockquote>
 <p>文件命名规范：文件名若有单词，中间加下划线，如hello_world.rs。<br>常量命名规范：全大写字母。<br>函数名名规范：小写字母，单词间下划线分开。Rust函数可定义在main函数后。</p>
 <p>Rust的main函数没有参数，没有返回。fn main{}。</p>
@@ -450,11 +459,20 @@
 <p>项目内可能存在的文件含义：<br>Cargo.toml 项目配置文件<br>.gitignore 用于git<br>Cargo.lock 关于依赖项的信息。</p>
 <h4 id="可在项目下使用的其他命令"><a href="#可在项目下使用的其他命令" class="headerlink" title="可在项目下使用的其他命令"></a>可在项目下使用的其他命令</h4><p>cargo build 构建项目<br>cargo run 编译运行代码<br>cargo check 只检查代码能通过编译，但不生成可执行文件。<br>cargo update 按照Cargo.lock更新依赖</p>
 <p>引用库use</p>
+<p>按层级划分：</p>
+<h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><p>包。有Cargo的特性，测试、共享、构建crate。<br>包含一个Cargo.toml,描述如何构建crate。只能包含0-1个library crate，但可以包含任意个binary crate。binary crate放在src&#x2F;bin目录下。<br>Cargo.toml可添加引用外部包。std属于外部包但不用添加引用，但是使用时还需要use。</p>
+<h4 id="Crate"><a href="#Crate" class="headerlink" title="Crate"></a>Crate</h4><p>单元包。一个模块树，可产生一个library或可执行文件。<br>分为binary crate和library crate。<br><strong>src&#x2F;main.rs</strong>:binary crate的crate root。Rust编译器从这里开始组成crate的根module。<br><strong>src&#x2F;lib.rs</strong>:library crate的crate root。</p>
+<h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>模块，定义在文件中。使用mod关键词创建，可嵌套。<br>模块可以定义<strong>私有边界</strong>，Rust中所有变量，结构体、模块、函数等都默认是私有的。父模块无法访问子模块条目，但子模块可以访问祖先的。<br>如果模块名后跟”;”而非代码块，那么指在此文件名中定义了模块。如在文件A.rs中定义了mod B;那么实际在src&#x2F;A&#x2F;B.rs。(此A为目录名)</p>
+<h4 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h4><p>为了在模块中找到某个条目而使用。<br>-绝对路径：从crate root开始，使用crate名或字面值crate。<br>-相对路径：当前模块开始，使用self、super或当前模块标识符。</p>
+<h4 id="use的使用"><a href="#use的使用" class="headerlink" title="use的使用"></a>use的使用</h4><p>pub use<br><strong>嵌套路径</strong>：一次引用多个来自相同的部分:</p>
+<pre><code class="rust">use std::io::&#123;self,write&#125;
+</code></pre>
+<p>self表示自身，另外也可使用通配符*。</p>
 <h2 id="1-通用的编程概念"><a href="#1-通用的编程概念" class="headerlink" title="1.通用的编程概念"></a>1.通用的编程概念</h2><h5 id="隐藏-shadowing"><a href="#隐藏-shadowing" class="headerlink" title="隐藏(shadowing)"></a>隐藏(shadowing)</h5><p>使用let可以给之前的同名变量声明新的变量，新的变量会隐藏之前的同名变量。<br>如:</p>
 <pre><code class="rust">let x=5;
 let x=x+1;
 </code></pre>
-<h3 id="1-1数据类型"><a href="#1-1数据类型" class="headerlink" title="1.1数据类型"></a>1.1数据类型</h3><h4 id="1-1-1标量数据类型"><a href="#1-1-1标量数据类型" class="headerlink" title="1.1.1标量数据类型"></a>1.1.1标量数据类型</h4><p>u32:32位的无符号整型。范围-(2^n-1)<del>2^n-1。<br>i32:32位的有符号整型。范围0-2^n-1，为默认类型。<br>u&#x2F;i8、u&#x2F;i16,u&#x2F;i64,u&#x2F;i128同理，数字为位数大小。<br>isize&#x2F;usize:由计算机架构决定大小，如64位系统就是64。<br>f32:32位浮点数类型。<br>f64:64位浮点数类型，为默认类型。<br>bool:值为true&#x2F;false。<br>char:4字节，使用unicode标量值。范围U+0000</del> U+D7FF,U+E000 ~U+10FFFF</p>
+<h3 id="1-1数据类型"><a href="#1-1数据类型" class="headerlink" title="1.1数据类型"></a>1.1数据类型</h3><h4 id="1-1-1标量数据类型"><a href="#1-1-1标量数据类型" class="headerlink" title="1.1.1标量数据类型"></a>1.1.1标量数据类型</h4><p>u32:32位的无符号整型。范围-(2^n-1)~2^n-1。<br>i32:32位的有符号整型。范围0-2^n-1，为默认类型。<br>u&#x2F;i8、u&#x2F;i16,u&#x2F;i64,u&#x2F;i128同理，数字为位数大小。<br>isize&#x2F;usize:由计算机架构决定大小，如64位系统就是64。<br>f32:32位浮点数类型。<br>f64:64位浮点数类型，为默认类型。<br>bool:值为true&#x2F;false。<br>char:4字节，使用unicode标量值。范围U+0000-U+D7FF,U+E000-U+10FFFF</p>
 <h4 id="1-1-2复合数据类型"><a href="#1-1-2复合数据类型" class="headerlink" title="1.1.2复合数据类型"></a>1.1.2复合数据类型</h4><p>Tuple:元组，圆括号声明，具有固定长度。类似python。</p>
 <pre><code class="rust"> let tup: (i32, f64, u8) = (500, 6.4, 1);//声明一个三元素元组。
 </code></pre>
@@ -543,21 +561,34 @@ s.entry(30).or_insert(88);//如果没有K=30的值，插入30,88，否则不插�
 <h5 id="传播错误"><a href="#传播错误" class="headerlink" title="传播错误"></a>传播错误</h5><p>比如函数返回值为Result&lt;String,io:Error&gt;，将错误抛回调用者。<br>?运算符：在返回值为Result的函数后面加?，也能起到返回错误的作用。实际上隐式调用了from函数。</p>
 <h3 id="1-3占位符"><a href="#1-3占位符" class="headerlink" title="1.3占位符"></a>1.3占位符</h3><p>{}<br>{:?}<br>{:#?}</p>
 <h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型实际上是含有占位符的模板，参考C++。编译时将占位符换成具体的类型参数。<br>如:</p>
-<pre><code class="rust">fn largest&lt;T&gt;(list:&amp;T)-&gt;T&#123;...&#125; //函数中的泛型
+<pre><code class="Rust">fn largest&lt;T&gt;(list:&amp;T)-&gt;T&#123;...&#125; //函数中的泛型
 </code></pre>
-<h2 id="Rust核心机制"><a href="#Rust核心机制" class="headerlink" title="Rust核心机制"></a>Rust核心机制</h2><p>Rust的核心机制。储存在stack上的数据必须有固定的大小，也就是copy trait的，编译时大小未知或运行时大小变化的数据存在heap上。<br>元组内的都是copy trait的，那么它本身也是。</p>
-<h3 id="所有权机制☆"><a href="#所有权机制☆" class="headerlink" title="所有权机制☆"></a>所有权机制☆</h3><h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><strong>引用</strong>：允许你使用某些值而不取得其所有权，因为<strong>Rust中变量一旦离开其所有权，就会失效</strong>。用&amp;表示。除此之外，直接赋值或调用.move()，会导致所有权转移，使用.clone(),相当于生成一个新的同样值的对象。.get()可以获得引用。<br><strong>可变引用</strong>：&amp;mnt [变量] 方式,函数中可变引用作参数，实参也需要可变。<br><strong>引用的作用域</strong>：从声明到最后一次使用。<br>Rust中，编译器可以保证引用永远不会是悬空引用，即不会指向的内容已提前被释放。<br>任意时刻只能满足之一：①一个可变引用 ②任意个不可变引用。也就是说，一个变量在其作用域内不能同时有可变和不可变的引用。<br><strong>pub关键字</strong>：公有的。对enum设置pub,里面都是pub的。而struct是pub，里面不一定是pub,mod也是。</p>
-<h4 id="函数中所有权变化"><a href="#函数中所有权变化" class="headerlink" title="函数中所有权变化"></a>函数中所有权变化</h4><p>如果是基本数据类型，进入函数时不失去所有权；堆中的变量进入函数会失去所有权，因此若需要保留，则应该引用传参。<br>被当作函数返回值的变量所有权将会被移动出函数并返回到调用函数的地方，而不会直接被无效释放。</p>
+<h2 id="2-Rust核心机制"><a href="#2-Rust核心机制" class="headerlink" title="2.Rust核心机制"></a>2.Rust核心机制</h2><p>Rust的核心机制。储存在stack上的数据必须有固定的大小，也就是copy trait的，编译时大小未知或运行时大小变化的数据存在heap上。<br>元组内的都是copy trait的，那么它本身也是。</p>
+<h3 id="2-1所有权机制☆"><a href="#2-1所有权机制☆" class="headerlink" title="2.1所有权机制☆"></a>2.1所有权机制☆</h3><h4 id="2-1-1引用"><a href="#2-1-1引用" class="headerlink" title="2.1.1引用"></a>2.1.1引用</h4><p><strong>引用</strong>：允许你使用某些值而不取得其所有权，因为<strong>Rust中变量一旦离开其所有权，就会失效</strong>。用&amp;表示。除此之外，直接赋值或调用.move()，会导致所有权转移，使用.clone(),相当于生成一个新的同样值的对象。.get()可以获得引用。默认不允许修改引用的值。<br><strong>可变引用</strong>：&amp;mnt [变量] 方式,函数中可变引用作参数，实参也需要可变。<br><strong>引用的作用域</strong>：从声明到最后一次使用。<br>Rust中，编译器可以保证引用永远不会是悬空引用，即不会指向的内容已提前被释放。<br>任意时刻只能满足之一：①一个可变引用 ②任意个不可变引用。也就是说，一个变量在其作用域内不能同时有可变和不可变的引用。<br><strong>pub关键字</strong>：公有的。对enum设置pub,里面都是pub的。而struct是pub，里面不一定是pub,mod也是。<br>切片slice不会改变所有权。</p>
+<h4 id="2-1-2函数中所有权变化"><a href="#2-1-2函数中所有权变化" class="headerlink" title="2.1.2函数中所有权变化"></a>2.1.2函数中所有权变化</h4><p>如果是基本数据类型，进入函数时不失去所有权；堆中的变量进入函数会失去所有权，因此若需要保留，则应该引用传参。<br>被当作函数返回值的变量所有权将会被移动出函数并返回到调用函数的地方，而不会直接被无效释放。</p>
 <p>借用</p>
-<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>按层级划分：</p>
-<h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><p>包。有Cargo的特性，测试、共享、构建crate。<br>包含一个Cargo.toml,描述如何构建crate。只能包含0-1个library crate，但可以包含任意个binary crate。binary crate放在src&#x2F;bin目录下。<br>Cargo.toml可添加引用外部包。std属于外部包但不用添加引用，但是使用时还需要use。</p>
-<h4 id="Crate"><a href="#Crate" class="headerlink" title="Crate"></a>Crate</h4><p>单元包。一个模块树，可产生一个library或可执行文件。<br>分为binary crate和library crate。<br><strong>src&#x2F;main.rs</strong>:binary crate的crate root。Rust编译器从这里开始组成crate的根module。<br><strong>src&#x2F;lib.rs</strong>:library crate的crate root。</p>
-<h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>模块，定义在文件中。使用mod关键词创建，可嵌套。<br>模块可以定义<strong>私有边界</strong>，Rust中所有变量，结构体、模块、函数等都默认是私有的。父模块无法访问子模块条目，但子模块可以访问祖先的。<br>如果模块名后跟”;”而非代码块，那么指在此文件名中定义了模块。如在文件A.rs中定义了mod B;那么实际在src&#x2F;A&#x2F;B.rs。(此A为目录名)</p>
-<h4 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h4><p>为了在模块中找到某个条目而使用。<br>-绝对路径：从crate root开始，使用crate名或字面值crate。<br>-相对路径：当前模块开始，使用self、super或当前模块标识符。</p>
-<h4 id="use的使用"><a href="#use的使用" class="headerlink" title="use的使用"></a>use的使用</h4><p>pub use<br><strong>嵌套路径</strong>：一次引用多个来自相同的部分:</p>
-<pre><code class="rust">use std::io::&#123;self,write&#125;
+<h3 id="2-2生命周期"><a href="#2-2生命周期" class="headerlink" title="2.2生命周期"></a>2.2生命周期</h3><p>引用保持有效的作用域。</p>
+<h3 id="2-3Trait"><a href="#2-3Trait" class="headerlink" title="2.3Trait"></a>2.3Trait</h3><p>把方法签名放在一起。来定义实现某种目的所必须的一种行为。类似于接口。<br>只能在本地crate实现trait。如果想在其他crate中实现trait，需要use引入并设置成公有。但是必须在本地作用域，父类型中不可见。</p>
+<pre><code class="Rust">pub trait Summary &#123;
+    fn summarize(&amp;self) -&gt; String &#123;//实现默认方法
+        String::from(&quot;(Read more...)&quot;)
+    &#125;
+    fn read(&amp;self)-&gt;String;//不实现默认方法
+&#125;
+impl Summary for NewsArticle &#123;//为NewArticle实现方法。
+    fn summarize(&amp;self) -&gt; String &#123;
+        format!(&quot;&#123;&#125;, by &#123;&#125; (&#123;&#125;)&quot;, self.headline, self.author, self.location)
+    &#125;
+&#125;
+/*Trait作为参数*/
+pub fn notify(item: impl Summary) &#123;
+    println!(&quot;Breaking news! &#123;&#125;&quot;, item.summarize());
+&#125;
+/*Trait Bound形式语法糖*/
+pub fn notify&lt;T: Summary&gt;(item: T) &#123;
+    println!(&quot;Breaking news! &#123;&#125;&quot;, item.summarize());
+&#125;
 </code></pre>
-<p>self表示自身，另外也可使用通配符*。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
@@ -568,10 +599,10 @@ s.entry(30).or_insert(88);//如果没有K=30的值，插入30,88，否则不插�
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>Rust学习笔记（基础篇）</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">2.6k</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">2.8k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
     <p><span class="copy-title">发布时间:</span>2022-03-02, 07:47:44</p>
-    <p><span class="copy-title">最后更新:</span>2022-03-08, 22:22:41</p>
+    <p><span class="copy-title">最后更新:</span>2022-03-14, 17:08:02</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Rust学习笔记（基础篇）">https://passacaglia424.github.io/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
