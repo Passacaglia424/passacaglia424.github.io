@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Rust学习笔记（基础篇） | Passacaglia的站点</title>
-  <meta name="keywords" content=" Rust , 编程语言 ">
-  <meta name="description" content="Rust学习笔记（基础篇） | Passacaglia的站点">
+  <title>vim映射修改&amp;vscode remote配置 | Passacaglia的站点</title>
+  <meta name="keywords" content=" Linux , vscode , vim ">
+  <meta name="description" content="vim映射修改&amp;vscode remote配置 | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="2674e99b81c8a64b29cf978962ef6003">
 <meta property="og:type" content="website">
@@ -406,9 +406,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Rust学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-vim映射修改和vscoderemote配置" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Rust学习笔记（基础篇）</h1>
+        <h1 class="article-title">vim映射修改&amp;vscode remote配置</h1>
     
     <div class="article-meta">
         
@@ -418,7 +418,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="后端">后端</a>
+            <a  data-rel="工具">工具</a>
             
         </span>
         
@@ -426,21 +426,23 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">Rust</a>
+            <a class="color1">Linux</a>
             
-            <a class="color5">编程语言</a>
+            <a class="color2">vscode</a>
+            
+            <a class="color4">vim</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-14 17:08:02'>2022-03-02 07:47</time>
+            发布时间 : <time class="date" title='最后更新: 2022-03-29 10:16:06'>2022-03-04 15:05</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.8k</span>
+        <span>字数:1.5k</span>
         
         
         
@@ -459,7 +461,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA"><span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">可在项目下使用的其他命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Package"><span class="toc-text">Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Crate"><span class="toc-text">Crate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Module"><span class="toc-text">Module</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Path"><span class="toc-text">Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#use%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">use的使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%9A%E7%94%A8%E7%9A%84%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="toc-text">1.通用的编程概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%97%8F-shadowing"><span class="toc-text">隐藏(shadowing)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1%E6%A0%87%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.1标量数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2%E5%A4%8D%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.2复合数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3%E9%9B%86%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.1.3集合数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashMap"><span class="toc-text">HashMap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">1.2控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">1.2.1控制语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">1.2.2错误处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF"><span class="toc-text">不可恢复错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E6%81%A2%E5%A4%8D%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">可恢复的错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%A0%E6%92%AD%E9%94%99%E8%AF%AF"><span class="toc-text">传播错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">1.3占位符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Rust%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6"><span class="toc-text">2.Rust核心机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E6%89%80%E6%9C%89%E6%9D%83%E6%9C%BA%E5%88%B6%E2%98%86"><span class="toc-text">2.1所有权机制☆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1%E5%BC%95%E7%94%A8"><span class="toc-text">2.1.1引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2%E5%87%BD%E6%95%B0%E4%B8%AD%E6%89%80%E6%9C%89%E6%9D%83%E5%8F%98%E5%8C%96"><span class="toc-text">2.1.2函数中所有权变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">2.2生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3Trait"><span class="toc-text">2.3Trait</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E6%8C%89%E9%94%AE%E6%98%A0%E5%B0%84%E4%BF%AE%E6%94%B9"><span class="toc-text">vim按键映射修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vscode-remote%E9%85%8D%E7%BD%AE"><span class="toc-text">vscode remote配置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -475,150 +477,120 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>Rust真是一个学习友好型语言，官方教程很全面！</center>
-<p align="right">————序</p>
-
-<blockquote>
-<p>注：由于学习时使用的是Windows 10系统，所以以下内容仅保证适用于windows系统，Linux系统下可能有微小差别。语法有点像简化版C++，有自己很多独特机制。Rust虽然官方教程友好，但是不适合作为入门语言。<br>学习参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hp4y1k7SV?p=36">https://www.bilibili.com/video/BV1hp4y1k7SV?p=36</a></p>
+        <h3 id="vim按键映射修改"><a href="#vim按键映射修改" class="headerlink" title="vim按键映射修改"></a>vim按键映射修改</h3><blockquote>
+<p>这篇文章写的时候还比较喜欢vim，现在觉得在windows下使用vscode remote更香一点，想一想还是挂上来。</p>
 </blockquote>
-<p>文件命名规范：文件名若有单词，中间加下划线，如hello_world.rs。<br>常量命名规范：全大写字母。<br>函数名名规范：小写字母，单词间下划线分开。Rust函数可定义在main函数后。</p>
-<p>Rust的main函数没有参数，没有返回。fn main{}。</p>
-<p>Rust marco(宏)，会在宏名称后面加’!’。Rust的缩进是四个空格，而不是tab键。</p>
-<p>Rust是“ahead of time”(预先编译)的语言，编译成功直接生成二进制文件，在windows下还会额外生成一个.pdb的调试文件。</p>
-<h3 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h3><p>cargo有官方中文文档:<a target="_blank" rel="noopener" href="https://cargo.budshome.com/index.html">https://cargo.budshome.com/index.html</a><br>使用包管理器cargo创建(安装Rust时自带，无需额外安装)。<br>命令: cargo new &lt;项目名&gt; 在当前路径下生成项目。</p>
-<p>项目内可能存在的文件含义：<br>Cargo.toml 项目配置文件<br>.gitignore 用于git<br>Cargo.lock 关于依赖项的信息。</p>
-<h4 id="可在项目下使用的其他命令"><a href="#可在项目下使用的其他命令" class="headerlink" title="可在项目下使用的其他命令"></a>可在项目下使用的其他命令</h4><p>cargo build 构建项目<br>cargo run 编译运行代码<br>cargo check 只检查代码能通过编译，但不生成可执行文件。<br>cargo update 按照Cargo.lock更新依赖</p>
-<p>引用库use</p>
-<p>按层级划分：</p>
-<h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><p>包。有Cargo的特性，测试、共享、构建crate。<br>包含一个Cargo.toml,描述如何构建crate。只能包含0-1个library crate，但可以包含任意个binary crate。binary crate放在src&#x2F;bin目录下。<br>Cargo.toml可添加引用外部包。std属于外部包但不用添加引用，但是使用时还需要use。</p>
-<h4 id="Crate"><a href="#Crate" class="headerlink" title="Crate"></a>Crate</h4><p>单元包。一个模块树，可产生一个library或可执行文件。<br>分为binary crate和library crate。<br><strong>src&#x2F;main.rs</strong>:binary crate的crate root。Rust编译器从这里开始组成crate的根module。<br><strong>src&#x2F;lib.rs</strong>:library crate的crate root。</p>
-<h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>模块，定义在文件中。使用mod关键词创建，可嵌套。<br>模块可以定义<strong>私有边界</strong>，Rust中所有变量，结构体、模块、函数等都默认是私有的。父模块无法访问子模块条目，但子模块可以访问祖先的。<br>如果模块名后跟”;”而非代码块，那么指在此文件名中定义了模块。如在文件A.rs中定义了mod B;那么实际在src&#x2F;A&#x2F;B.rs。(此A为目录名)</p>
-<h4 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h4><p>为了在模块中找到某个条目而使用。<br>-绝对路径：从crate root开始，使用crate名或字面值crate。<br>-相对路径：当前模块开始，使用self、super或当前模块标识符。</p>
-<h4 id="use的使用"><a href="#use的使用" class="headerlink" title="use的使用"></a>use的使用</h4><p>pub use<br><strong>嵌套路径</strong>：一次引用多个来自相同的部分:</p>
-<pre><code class="rust">use std::io::&#123;self,write&#125;
+<p>​    在Linux内核的系统下，IDE的选择和Windows有所不同。虽然有很多强大的IDE同样支持Linux版本，但是考虑到服务器等没有图形化界面的应用情景，vim这一基于命令行，如瑞士军刀般好用的工具还是会配上用场(Emacs也比较好用，不过笔者更喜欢vim)。</p>
+<p>​    但是vim相较于现代IDE而言还是过于古老，对于一个没有更改过的vim还是比较低效的。这里记录一些常用的按键映射，自定义快捷键，在输入部分内容时可以自动补全，或是创建文件时添加头部信息。这样不仅让vim使用更方便一些，更换系统时也不用重新配置一遍，直接替换配置文件即可。配置文件放置于用户根目录下。</p>
+<p>​   部分设置参考网上大佬的博客，覆盖面算是很全面了。<br>    命令模式下输入set可以查看所有可设置的选项</p>
+<p>在用户家目录（~）下创建名为.vimrc的文件，将以下内容复制到文件中。文件转移的话，vim中命令模式下ggVG+y全选复制，V为进入可视模式。</p>
+<pre><code class="sh">&quot;/*************************************************************************
+&quot;    &gt; File Name: .vimrc
+&quot;    &gt; Author:passacaglia 
+&quot;    &gt; Mail: 1143703334@qq.com 
+&quot;    &gt; Created Time: 2021年09月20日 星期一 15时15分34秒
+&quot; ************************************************************************/
+syntax on
+set background=dark
+set confirm
+&quot;set cursorline &quot; 突出显示当前行
+set laststatus=2 &quot; 显示状态栏
+set ruler                   &quot; 打开状态栏标尺
+set autoindent
+set nowrapscan              &quot; 禁止在搜索到文件两端时重新搜索
+set incsearch               &quot; 输入搜索内容时就显示搜索结果
+set hlsearch                &quot; 搜索时高亮显示被找到的文本
+set noerrorbells            &quot; 关闭错误信息响铃
+set cmdheight=1             &quot; 设定命令行的行数为 1
+
+set foldmethod=syntax       &quot; 设置语法折叠
+set foldcolumn=0            &quot; 设置折叠区域的宽度
+setlocal foldlevel=1        &quot; 设置折叠层数为
+&quot; set foldclose=all           &quot; 设置为自动关闭折叠                            
+nnoremap &lt;space&gt; @=((foldclosed(line(&#39;.&#39;)) &lt; 0) ? &#39;zc&#39; : &#39;zo&#39;)&lt;CR&gt;
+                            &quot; 用空格键来开关折叠
+
+&quot;style
+set tabstop=4       &quot;tabkey width
+set nu
+set softtabstop=4
+set shiftwidth=4
+
+&quot;selectable,multiple language environment
+if has(&quot;multi_byte&quot;)
+set encoding=utf-8
+set termencoding=utf-8
+set formatoptions+=mM
+set fencs=utf-8,gbk
+endif
+&quot; 选中状态下 Ctrl+c 复制
+vmap &lt;C-c&gt; &quot;+y
+
+
+&quot;此部分是插入模式下的映射
+:inoremap &#123; &#123;&lt;CR&gt;&#125;&lt;ESC&gt;O
+:inoremap ( ()&lt;ESC&gt;i
+&quot;:inoremap ) &lt;c-r&gt;=ClosePair(&#39;)&#39;)&lt;CR&gt;
+&quot;:inoremap &#125; &lt;c-r&gt;=ClosePair(&#39;&#125;&#39;)&lt;CR&gt;
+:inoremap [ []&lt;ESC&gt;i
+&quot;:inoremap ] &lt;c-r&gt;=ClosePair(&#39;]&#39;)&lt;CR&gt;
+:inoremap &quot; &quot;&quot;&lt;ESC&gt;i
+:inoremap &#39; &#39;&#39;&lt;ESC&gt;i
+
+&quot;允许插件  
+filetype plugin on
+&quot;共享剪贴板  
+set clipboard=unnamed
+
+&quot;function
+autocmd BufNewFile *.cpp,*.[ch],*.sh,*.py exec &quot;:call SetTitle()&quot;
+func SetTitle()
+if &amp;filetype == &#39;sh&#39;
+    call setline(1,&quot;\#########################################################################&quot;)
+    call append(line(&quot;.&quot;), &quot;\# File Name: &quot;.expand(&quot;%&quot;))
+    call append(line(&quot;.&quot;)+1, &quot;\# Author: passacaglia&quot;)
+    call append(line(&quot;.&quot;)+2, &quot;\# mail: 1143703334@qq.com&quot;)
+    call append(line(&quot;.&quot;)+3, &quot;\# Created Time: &quot;.strftime(&quot;%c&quot;))
+    call append(line(&quot;.&quot;)+4, &quot;\#########################################################################&quot;)
+    call append(line(&quot;.&quot;)+5, &quot;\#!/bin/bash&quot;)
+    call append(line(&quot;.&quot;)+6, &quot;&quot;)
+elseif &amp;filetype == &#39;c&#39; || &amp;filetype == &#39;cpp&#39; || &amp;filetype == &#39;h&#39;
+    call setline(1, &quot;/*************************************************************************&quot;)
+    call append(line(&quot;.&quot;), &quot;    &gt; File Name: &quot;.expand(&quot;%&quot;))
+    call append(line(&quot;.&quot;)+1, &quot;    &gt; Author: passacaglia&quot;)
+    call append(line(&quot;.&quot;)+2, &quot;    &gt; Mail: 1143703334@qq.com &quot;)
+    call append(line(&quot;.&quot;)+3, &quot;    &gt; Created Time: &quot;.strftime(&quot;%c&quot;))
+    call append(line(&quot;.&quot;)+4, &quot; ************************************************************************/&quot;)
+    call append(line(&quot;.&quot;)+5, &quot;&quot;)
+elseif &amp;filetype == &#39;py&#39;
+    call setline(1,&quot;#########################################################################&quot;)
+    call append(line(&quot;.&quot;), &quot;# File Name: &quot;.expand(&quot;%&quot;))
+    call append(line(&quot;.&quot;)+1, &quot;# Author: passacaglia&quot;)
+    call append(line(&quot;.&quot;)+2, &quot;# mail: passacaglia@88.com&quot;)
+    call append(line(&quot;.&quot;)+3, &quot;# Created Time: &quot;.strftime(&quot;%c&quot;))
+    call append(line(&quot;.&quot;)+4, &quot;#########################################################################&quot;)
+    call append(line(&quot;.&quot;)+5, &quot;&quot;)
+endif
+if &amp;filetype == &#39;cpp&#39;
+    call append(line(&quot;.&quot;)+6, &quot;#include&lt;iostream&gt;&quot;)
+    call append(line(&quot;.&quot;)+7, &quot;using namespace std;&quot;)
+    call append(line(&quot;.&quot;)+8, &quot;&quot;)
+endif
+if &amp;filetype == &#39;c&#39;
+    call append(line(&quot;.&quot;)+6, &quot;#include&lt;stdio.h&gt;&quot;)
+    call append(line(&quot;.&quot;)+7, &quot;&quot;)
+endif
+    &quot;新建文件后，自动定位到文件末尾
+autocmd BufNewFile * normal G
+endfunc
 </code></pre>
-<p>self表示自身，另外也可使用通配符*。</p>
-<h2 id="1-通用的编程概念"><a href="#1-通用的编程概念" class="headerlink" title="1.通用的编程概念"></a>1.通用的编程概念</h2><h5 id="隐藏-shadowing"><a href="#隐藏-shadowing" class="headerlink" title="隐藏(shadowing)"></a>隐藏(shadowing)</h5><p>使用let可以给之前的同名变量声明新的变量，新的变量会隐藏之前的同名变量。<br>如:</p>
-<pre><code class="rust">let x=5;
-let x=x+1;
+<p>其中,这个表示回车符：</p>
+<pre><code>&lt;CR&gt;
 </code></pre>
-<h3 id="1-1数据类型"><a href="#1-1数据类型" class="headerlink" title="1.1数据类型"></a>1.1数据类型</h3><h4 id="1-1-1标量数据类型"><a href="#1-1-1标量数据类型" class="headerlink" title="1.1.1标量数据类型"></a>1.1.1标量数据类型</h4><p>u32:32位的无符号整型。范围-(2^n-1)~2^n-1。<br>i32:32位的有符号整型。范围0-2^n-1，为默认类型。<br>u&#x2F;i8、u&#x2F;i16,u&#x2F;i64,u&#x2F;i128同理，数字为位数大小。<br>isize&#x2F;usize:由计算机架构决定大小，如64位系统就是64。<br>f32:32位浮点数类型。<br>f64:64位浮点数类型，为默认类型。<br>bool:值为true&#x2F;false。<br>char:4字节，使用unicode标量值。范围U+0000-U+D7FF,U+E000-U+10FFFF</p>
-<h4 id="1-1-2复合数据类型"><a href="#1-1-2复合数据类型" class="headerlink" title="1.1.2复合数据类型"></a>1.1.2复合数据类型</h4><p>Tuple:元组，圆括号声明，具有固定长度。类似python。</p>
-<pre><code class="rust"> let tup: (i32, f64, u8) = (500, 6.4, 1);//声明一个三元素元组。
-</code></pre>
-<p>数组：分配在堆栈上。类似js。rust不允许访问超出索引的内存。</p>
-<pre><code class="rust">let a = [1, 2, 3, 4, 5];
-let a:[i32;5] = [1, 2, 3, 4, 5];
-let a = [3;5];//分配了5个元素，都是3。
-</code></pre>
-<p>结构体</p>
-<pre><code class="rust">struct Rectangle&#123;
-    width:u32;
-    height:u32;
-&#125;
-let rect= Rectangle&#123;
-    width:32,
-    height:40,
-&#125;;//赋值
-</code></pre>
-<p>enum枚举，值只能是其中之一。<br>结构体、枚举类型中可定义方法。访问成员 枚举名::成员名</p>
-<pre><code class="rust">impl Rectangle&#123;
-    fn area(&amp;self)-&gt;u32&#123;
-        self.width=self.length;
-    &#125;
-&#125;
-</code></pre>
-<p>rust中没有-&gt;运算符，会自动引用和解引用。</p>
-<h4 id="1-1-3集合数据类型"><a href="#1-1-3集合数据类型" class="headerlink" title="1.1.3集合数据类型"></a>1.1.3集合数据类型</h4><p>标准库定义的数据类型，储存在堆上。</p>
-<h5 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h5><p>写法Vec<T>。创建方式有：</T></p>
-<pre><code class="rust">let v:Vec&lt;i32&gt;=Vec::new();
-let vec![1,2,3];
-/*与枚举的结合，实现储存不同数据*/
-enum Cell&#123;
-    Int(i32);
-    Float(f64);
-    Text(String);
-&#125;
-let v=vec![Cell::Int(3),Text(String::from(&quot;hello))];
-</code></pre>
-<p>操作：</p>
-<pre><code class="rust">v.push(4);//添加元素。
-v.get(2);//获得引用。或者使用下标索引也是引用。
-</code></pre>
-<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p>这是来自标准库的类型，除此之外还有&amp;str、OsString、CString、CStr等类似的字符串类型。Rust不允许对String进行索引，但允许按照字形簇的索引边界进行切割。</p>
-<pre><code class="rust">let mut s=String::from(&quot;foo&quot;);
-s.push_str(&quot;bar&quot;);//添加字符串到之后，该方法不会获得所有权。
-s.push(&#39;s&#39;);//添加单个字符
-let s=format!(&quot;&#123;&#125;-&#123;&#125;&quot;,s,x);//用宏拼接s和x字符串，不会获得所有权。
-for (k,v) in &amp;s&#123;//遍历
-    println!(&quot;&#123;&#125;&#123;&#125;&quot;,k,v);
-&#125;
-//split_whitespace方法：按空格分割字符串
-</code></pre>
-<p>+号也可以连接字符串，不能两个字符串直接相加，需要其中一个是引用形式，会将其转化为字符串切片。不引用的会失效。<br>字符串切片：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220306170931.png" alt="20220306170931"><br>被切片引用的字符串禁止修改值。<br>字形簇：真正接近人类语言的表示，一个个真正的字符。</p>
-<h5 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h5><p>哈希表，用键值对的方式储存HashMap&lt;K,V&gt;。不是预导入类型。K,V分别必须是同一类型。<br>预导入：不需要额外use，直接就可使用。</p>
-<pre><code class="rust">let mut hp=HashMap::new();
-hp.insert(3，5);//编译器可以推断出K,V的类型了。
-/*通过元素类型为元组的vector加collect()方法来生成HashMap。*/
-let v=vec![1,2];
-let w=vec![3,4];
-let s:HashMap&lt;_,_&gt;=v.iter().zip(w.iter()).collect();
-s.entry(30).or_insert(88);//如果没有K=30的值，插入30,88，否则不插入
-/*or_insert()返回值:K存在返回对应V的可变引用；不存在就插进去再返回这个可变引用。*/
-</code></pre>
-<h3 id="1-2控制流"><a href="#1-2控制流" class="headerlink" title="1.2控制流"></a>1.2控制流</h3><h4 id="1-2-1控制语句"><a href="#1-2-1控制语句" class="headerlink" title="1.2.1控制语句"></a>1.2.1控制语句</h4><p>判断if&#x2F;else if&#x2F;else,判断表达式不加括号。<br>可用于作为变量条件声明，但是要求返回类型相等。</p>
-<pre><code class="rust">let number = if true &#123;5&#125; else &#123;6&#125;;
-</code></pre>
-<p>无限循环loop，break退出。条件循环while，判断表达式也不加括号。<br>范围循环for … in … 类似python。设置(1..4)可表示1-3的范围，.rev()反向。<br>模式匹配match,举例(绑定值的模式匹配):</p>
-<pre><code class="rust">match Coin&#123;
-    Coin:dollar=&gt;1,
-    Coin:yuan=&gt;4,
-    Coin:Quarter=&gt;(state)&#123;
-        println!&#123;&quot;Hello &#123;:?&#125;&quot;,state&#125;;
-        25
-    &#125;
-&#125;
-</code></pre>
-<p><em>通配符为其余情况,()表示什么都没发生。rust强制要求处理所有情况，可用</em>&#x3D;&gt;()</p>
-<h4 id="1-2-2错误处理"><a href="#1-2-2错误处理" class="headerlink" title="1.2.2错误处理"></a>1.2.2错误处理</h4><h5 id="不可恢复错误"><a href="#不可恢复错误" class="headerlink" title="不可恢复错误"></a>不可恢复错误</h5><p>执行panic!宏，默认展开清理调用栈，或选择不清理直接退出程序:在cargo.toml中设置panic&#x3D;’abort’。<br>cargo build&#x2F;run中不带–release参数会带有调试信息。</p>
-<h5 id="可恢复的错误"><a href="#可恢复的错误" class="headerlink" title="可恢复的错误"></a>可恢复的错误</h5><p>Result枚举类来处理错误，这类错误类似java里的异常。可通过结合match表达式处理错误，也可以用闭包。</p>
-<pre><code class="rust">enum Result&lt;T, E&gt; &#123;
-    Ok(T),//操作成功Ok变体返回T类型
-    Err(E),//操作失败Ok变体返回E类型
-&#125;
-</code></pre>
-<p>.unwrap()方法：match的快捷方法，如果Ok返回值，如果Err调用panic!。<br>.expect()方法可以自定义错误信息。</p>
-<h5 id="传播错误"><a href="#传播错误" class="headerlink" title="传播错误"></a>传播错误</h5><p>比如函数返回值为Result&lt;String,io:Error&gt;，将错误抛回调用者。<br>?运算符：在返回值为Result的函数后面加?，也能起到返回错误的作用。实际上隐式调用了from函数。</p>
-<h3 id="1-3占位符"><a href="#1-3占位符" class="headerlink" title="1.3占位符"></a>1.3占位符</h3><p>{}<br>{:?}<br>{:#?}</p>
-<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型实际上是含有占位符的模板，参考C++。编译时将占位符换成具体的类型参数。<br>如:</p>
-<pre><code class="Rust">fn largest&lt;T&gt;(list:&amp;T)-&gt;T&#123;...&#125; //函数中的泛型
-</code></pre>
-<h2 id="2-Rust核心机制"><a href="#2-Rust核心机制" class="headerlink" title="2.Rust核心机制"></a>2.Rust核心机制</h2><p>Rust的核心机制。储存在stack上的数据必须有固定的大小，也就是copy trait的，编译时大小未知或运行时大小变化的数据存在heap上。<br>元组内的都是copy trait的，那么它本身也是。</p>
-<h3 id="2-1所有权机制☆"><a href="#2-1所有权机制☆" class="headerlink" title="2.1所有权机制☆"></a>2.1所有权机制☆</h3><h4 id="2-1-1引用"><a href="#2-1-1引用" class="headerlink" title="2.1.1引用"></a>2.1.1引用</h4><p><strong>引用</strong>：允许你使用某些值而不取得其所有权，因为<strong>Rust中变量一旦离开其所有权，就会失效</strong>。用&amp;表示。除此之外，直接赋值或调用.move()，会导致所有权转移，使用.clone(),相当于生成一个新的同样值的对象。.get()可以获得引用。默认不允许修改引用的值。<br><strong>可变引用</strong>：&amp;mnt [变量] 方式,函数中可变引用作参数，实参也需要可变。<br><strong>引用的作用域</strong>：从声明到最后一次使用。<br>Rust中，编译器可以保证引用永远不会是悬空引用，即不会指向的内容已提前被释放。<br>任意时刻只能满足之一：①一个可变引用 ②任意个不可变引用。也就是说，一个变量在其作用域内不能同时有可变和不可变的引用。<br><strong>pub关键字</strong>：公有的。对enum设置pub,里面都是pub的。而struct是pub，里面不一定是pub,mod也是。<br>切片slice不会改变所有权。</p>
-<h4 id="2-1-2函数中所有权变化"><a href="#2-1-2函数中所有权变化" class="headerlink" title="2.1.2函数中所有权变化"></a>2.1.2函数中所有权变化</h4><p>如果是基本数据类型，进入函数时不失去所有权；堆中的变量进入函数会失去所有权，因此若需要保留，则应该引用传参。<br>被当作函数返回值的变量所有权将会被移动出函数并返回到调用函数的地方，而不会直接被无效释放。</p>
-<p>借用</p>
-<h3 id="2-2生命周期"><a href="#2-2生命周期" class="headerlink" title="2.2生命周期"></a>2.2生命周期</h3><p>引用保持有效的作用域。</p>
-<h3 id="2-3Trait"><a href="#2-3Trait" class="headerlink" title="2.3Trait"></a>2.3Trait</h3><p>把方法签名放在一起。来定义实现某种目的所必须的一种行为。类似于接口。<br>只能在本地crate实现trait。如果想在其他crate中实现trait，需要use引入并设置成公有。但是必须在本地作用域，父类型中不可见。</p>
-<pre><code class="Rust">pub trait Summary &#123;
-    fn summarize(&amp;self) -&gt; String &#123;//实现默认方法
-        String::from(&quot;(Read more...)&quot;)
-    &#125;
-    fn read(&amp;self)-&gt;String;//不实现默认方法
-&#125;
-impl Summary for NewsArticle &#123;//为NewArticle实现方法。
-    fn summarize(&amp;self) -&gt; String &#123;
-        format!(&quot;&#123;&#125;, by &#123;&#125; (&#123;&#125;)&quot;, self.headline, self.author, self.location)
-    &#125;
-&#125;
-/*Trait作为参数*/
-pub fn notify(item: impl Summary) &#123;
-    println!(&quot;Breaking news! &#123;&#125;&quot;, item.summarize());
-&#125;
-/*Trait Bound形式语法糖*/
-pub fn notify&lt;T: Summary&gt;(item: T) &#123;
-    println!(&quot;Breaking news! &#123;&#125;&quot;, item.summarize());
-&#125;
-</code></pre>
+<p>在上方SetTitle函数的Author和Mail字符串中将作者名和邮箱改成自己的即可。<br>​    实际上暂时只支持C&#x2F;C++、shell和python的内容，毕竟java等跨平台又主要用来写大工程的语言也没有在无图形化的linux下硬写的必要，主要适用于小文件场景。</p>
+<h3 id="vscode-remote配置"><a href="#vscode-remote配置" class="headerlink" title="vscode remote配置"></a>vscode remote配置</h3><p>在Windows&#x2F;Mac系统下可以通过vscode的插件远程连接Linux服务器，从而在图形化界面下编写代码。vscode才是永远的神好吧,没有实不现的功能，只有找不到的插件→_→<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220305115520.png" alt="20220305115520"></p>
+<p>打开vscode,下载这个插件:<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220307193140.png" alt="20220307193140"></p>
+<p>原理就是基于SSH连接。ctrl+shift+p打开设置输入Remote-SSH找到这个插件,先选择其中的“Connect to Host…”选项，再选择”Configure SSH Hosts…”选项，最后选择config文件，我这里是这样：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220307193812.png" alt="20220307193812"><br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220307194034.png" alt="20220307194034"><br>在这里按格式设置Host名(可任意)、HostName(远程主机ip)、User(登录的用户名)。填好后在左边的远程资源管理器中就会出现相应的主机了，可直接连接：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220307194133.png" alt="20220307194133"><br>选择一个窗口作为连接后的界面，连接后，选择一个目录，会建立工作区，在这个界面打开终端会是远程主机的终端。SSH连接默认使用22号端口，请保证远程主机的端口打开。此外，在此窗口打开终端，是远程主机的终端。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
@@ -628,12 +600,12 @@ pub fn notify&lt;T: Summary&gt;(item: T) &#123;
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Rust学习笔记（基础篇）</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">2.8k</span></p>
+    <p><span class="copy-title">文章标题:</span>vim映射修改&amp;vscode remote配置</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.5k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-03-02, 07:47:44</p>
-    <p><span class="copy-title">最后更新:</span>2022-03-14, 17:08:02</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Rust学习笔记（基础篇）">https://passacaglia424.github.io/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
+    <p><span class="copy-title">发布时间:</span>2022-03-04, 15:05:50</p>
+    <p><span class="copy-title">最后更新:</span>2022-03-29, 10:16:06</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/04/vim%E6%98%A0%E5%B0%84%E4%BF%AE%E6%94%B9%E5%92%8Cvscoderemote%E9%85%8D%E7%BD%AE/" title="vim映射修改&amp;vscode remote配置">https://passacaglia424.github.io/2022/03/04/vim%E6%98%A0%E5%B0%84%E4%BF%AE%E6%94%B9%E5%92%8Cvscoderemote%E9%85%8D%E7%BD%AE/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>
