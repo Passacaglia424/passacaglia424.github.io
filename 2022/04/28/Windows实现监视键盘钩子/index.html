@@ -2,21 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Passacaglia的站点</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Passacaglia的站点">
+  <title>Windows hook技术，实现监视键盘按键的钩子 | Passacaglia的站点</title>
+  <meta name="keywords" content=" Windows , hook ">
+  <meta name="description" content="Windows hook技术，实现监视键盘按键的钩子 | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
+<meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
 <meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://passacaglia424.github.io/about/index.html">
+<meta property="og:title" content="Passacaglia的站点">
+<meta property="og:url" content="https://passacaglia424.github.io/local/C++%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86.html">
 <meta property="og:site_name" content="Passacaglia的站点">
-<meta property="og:description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
+<meta property="og:description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-16T14:23:58.248Z">
-<meta property="article:modified_time" content="2022-02-16T14:23:58.248Z">
+<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
+<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304160615.png">
+<meta property="article:published_time" content="2022-04-08T02:34:36.396Z">
+<meta property="article:modified_time" content="2022-04-08T02:34:36.396Z">
 <meta property="article:author" content="Passacaglia">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
 
 
 <link rel="icon" href="/img/headportrait.png">
@@ -152,7 +155,7 @@
     <li>
         <div class="all active" data-rel="全部内容">全部内容
             
-                <small>(6)</small>
+                <small>(9)</small>
             
         </div>
     </li>
@@ -163,7 +166,7 @@
                     <div data-rel="工具">
                         
                         工具
-                        <small>(2)</small>
+                        <small>(3)</small>
                         
                     </div>
                     
@@ -177,7 +180,7 @@
                     <div data-rel="后端">
                         
                         后端
-                        <small>(1)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -191,7 +194,7 @@
                     <div data-rel="安全">
                         
                         安全
-                        <small>(1)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -233,8 +236,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="6">
-<input type="hidden" id="yelog_site_word_count" value="17.3k">
+<input type="hidden" id="yelog_site_posts_number" value="9">
+<input type="hidden" id="yelog_site_word_count" value="20k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -298,11 +301,27 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>链接</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>实用工具</a>
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>算法</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>题目</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>网页</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>文档</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -311,6 +330,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>github</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hook</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -329,6 +352,10 @@
                 <i class="iconfont icon-tag"></i><a>vscode</a>
             </li>
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Windows</a>
+            </li>
+        
     </div>
 
 </div>
@@ -339,6 +366,22 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        <a  class="全部内容 工具 "
+           href="/2022/05/07/%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8%E7%9A%84%E9%93%BE%E6%8E%A5/"
+           data-tag="链接,文档"
+           data-author="" >
+            <span class="post-title" title="一些实用的链接">一些实用的链接</span>
+            <span class="post-date" title="2022-05-07 16:24:47">2022/05/07</span>
+        </a>
+        
+        <a  class="全部内容 安全 "
+           href="/2022/04/28/Windows%E5%AE%9E%E7%8E%B0%E7%9B%91%E8%A7%86%E9%94%AE%E7%9B%98%E9%92%A9%E5%AD%90/"
+           data-tag="Windows,hook"
+           data-author="" >
+            <span class="post-title" title="Windows hook技术，实现监视键盘按键的钩子">Windows hook技术，实现监视键盘按键的钩子</span>
+            <span class="post-date" title="2022-04-28 11:08:58">2022/04/28</span>
+        </a>
         
         <a  class="全部内容 安全 "
            href="/2022/03/28/%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%88%86%E6%9E%90%E7%BD%91%E7%AB%99%E5%8F%AF%E6%B3%A8%E6%84%8F%E7%9A%84%E5%86%85%E5%AE%B9%E7%82%B9/"
@@ -370,6 +413,14 @@
            data-author="" >
             <span class="post-title" title="Rust学习笔记（基础篇）">Rust学习笔记（基础篇）</span>
             <span class="post-date" title="2022-03-02 07:47:44">2022/03/02</span>
+        </a>
+        
+        <a  class="全部内容 后端 "
+           href="/2022/03/01/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%8F%E5%85%B8%E9%A2%98%E7%9B%AE/"
+           data-tag="算法,题目"
+           data-author="" >
+            <span class="post-title" title="原地算法的经典题目">原地算法的经典题目</span>
+            <span class="post-date" title="2022-03-01 19:19:12">2022/03/01</span>
         </a>
         
         <a  class="全部内容 杂谈 "
@@ -406,22 +457,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-Windows实现监视键盘钩子" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Windows hook技术，实现监视键盘按键的钩子</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="安全">安全</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Windows</a>
+            
+            <a class="color5">hook</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-11 14:35:10'>2022-03-28 10:41</time>
+            发布时间 : <time class="date" title='最后更新: 2022-05-02 10:42:02'>2022-04-28 11:08</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:266</span>
         
         
         
@@ -440,7 +510,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#dll%E7%9A%84%E7%BC%96%E5%86%99%E6%A0%BC%E5%BC%8F"><span class="toc-text">dll的编写格式</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -456,13 +526,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>Windows实际上是基于消息处理的系统，钩子函数(hook)是Windows消息处理机制的一部分,类似于中断。HOOK机制允许应用程序拦截并处理Windows消息或指定事件，当指定的消息发出后，HOOK程序就可以在消息到达目标窗口之前将其捕获，从而得到对消息的控制权，进而可以对该消息进行处理或修改，加入我们所需的功能。</p>
+<p>Windows消息流<br>发生键盘输入事件时，WM_KEYDOWN消息被添加到OS message queue。OS判断哪个应用程序中发生了事件，然后从消息队列取出消息，添加到应用程序的application message queue中。应用程序监视自身的消息队列，发现添加的WM_KEYDOWN后调用相应的事件处理程序处理。</p>
+<p>hInstance 窗口实例句柄<br>char与wchar_t的转换：<br>char-&gt;wchar_t:直接TEXT()保住字符串即可，返回值为宽字符性<br>wchar_t-&gt;char:</p>
+<h3 id="dll的编写格式"><a href="#dll的编写格式" class="headerlink" title="dll的编写格式"></a>dll的编写格式</h3><p>这里使用Visual Studio编写dll文件。</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
     </div>
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Windows hook技术，实现监视键盘按键的钩子</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">266</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-04-28, 11:08:58</p>
+    <p><span class="copy-title">最后更新:</span>2022-05-02, 10:42:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/04/28/Windows%E5%AE%9E%E7%8E%B0%E7%9B%91%E8%A7%86%E9%94%AE%E7%9B%98%E9%92%A9%E5%AD%90/" title="Windows hook技术，实现监视键盘按键的钩子">https://passacaglia424.github.io/2022/04/28/Windows%E5%AE%9E%E7%8E%B0%E7%9B%91%E8%A7%86%E9%94%AE%E7%9B%98%E9%92%A9%E5%AD%90/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
@@ -789,5 +875,9 @@
     })
 </script>
 
-
+<style>
+    body{
+        cursor: url("https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/羽毛.png"), text
+    }
+</style>
 </html>

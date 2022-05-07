@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Passacaglia的站点</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Passacaglia的站点">
+  <title>原地算法的经典题目 | Passacaglia的站点</title>
+  <meta name="keywords" content=" 算法 , 题目 ">
+  <meta name="description" content="原地算法的经典题目 | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
 <meta property="og:type" content="website">
@@ -457,22 +457,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-原地算法的经典题目" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">原地算法的经典题目</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">算法</a>
+            
+            <a class="color3">题目</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-25 23:57:22'>2022-03-28 10:41</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-15 21:11:25'>2022-03-01 19:19</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:401</span>
+        <span>字数:1.4k</span>
         
         
         
@@ -491,7 +510,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%8F%8F%E8%BF%B0"><span class="toc-text">算法描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E5%9C%BA%E6%99%AF"><span class="toc-text">部分场景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84%E7%BF%BB%E8%BD%AC"><span class="toc-text">1.数组翻转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E6%97%8B%E8%BD%AC"><span class="toc-text">2.矩阵旋转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BA%8C%E5%8F%89%E6%A0%91%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">3.二叉树转链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C"><span class="toc-text">最大子数组和</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -507,12 +526,97 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>事务规范：</p>
-<p>经常分组和排序用索引group by   order by<br>一个列值域很大，待排序的列有多个，建立复合索引。</p>
-<p>能提高连接操作性能或者减少连接操作的是：增<br>加冗余列，指在多个表中增加具有相同语义的列，它常用来在查询时避<br>免连接操作；反规范化，也就是降低表的规范化程度，减少表间的连接，<br>提高查询性能；对于经常需要进行查询、连接、统计操作，且数据量大<br>的基本表可以建立索引提高查询效率；聚集文件可以提高频繁进行多表<br>连接操作的查询效率。</p>
-<p>数据监控分析包括对数据库构架<br>体系的监控（如空间基本信息、空间使用率与剩余空间大小、空间是否<br>具有自动扩展的能力、哪些表的扩展将引起空间的扩展，以及段的占用<br>空间与区间数等）和对数据库性能的监控（如数据缓冲区的命中率、库<br>缓冲、用户锁、锁与等待、回滚段、临时段使用情况、索引的使用情况、等待事件和共享池等）</p>
-<p>数据库运行维护与优化包括数据库的转储和恢复；数据库<br>的安全性和完整性控制；数据库性能的监控分析和改进；数据库的重组<br>和重构。</p>
-<p>本地自治、非集中式管理以及高可用性是分布式数据库最基本<br>的特征。</p>
+        <h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><p>首先是摘自维基百科的描述：</p>
+<blockquote>
+<p>原地算法是基本上不需要借助额外的数据结构就能对输入的数据进行变换的算法。不过，分配少量空间给部分辅助变量是被允许的。算法执行过程中，输入的数据往往会被输出结果覆盖。原地算法只能通过替换或交换元素的方式来修改原始的输入。</p>
+</blockquote>
+<p>可以说，原地算法是空间复杂度上非常理想的一类算法，而且由于内存的分配与释放也是非常耗时的环节，原地算法甚至有可能还会有时间上的优势。不过一般来说，想要满足O(1)的空间复杂度非常困难，所以，一般认为满足O(logn)的就可以称之为原地算法。同时，这不是某个具体的算法，而是一类算法的统称。</p>
+<h3 id="部分场景"><a href="#部分场景" class="headerlink" title="部分场景"></a>部分场景</h3><p>这些是目前记录下来可以用原地算法的场景，如果有需要内存限制比较严格的条件下实现相似功能，可以就这么用。</p>
+<h4 id="1-数组翻转"><a href="#1-数组翻转" class="headerlink" title="1.数组翻转"></a>1.数组翻转</h4><p><strong>要求</strong>：<br>给定一个n元素的数组A，将数组的所有元素逆序排列。<br><strong>简单实现</strong>：<br>创建一个大小相同的数组，然后将输入 a 中的元素按照恰当的顺序复制到新数组中，最后删除 a。(C++版本)</p>
+<pre><code class="C++">template&lt;typename T&gt;
+ function reverse-in-place(a[0..n])
+     for i from 0 to floor(n/2)
+         tmp := a[n-i]
+         a[i] := a[n-i]
+         a[n-i] := tmp
+</code></pre>
+<p><strong>原地算法实现</strong>：</p>
+<h4 id="2-矩阵旋转"><a href="#2-矩阵旋转" class="headerlink" title="2.矩阵旋转"></a>2.矩阵旋转</h4><p>给你一幅由 N × N 矩阵表示的图像，其中每个像素的大小为 4 字节。请你设计一种算法，将图像旋转 90 度。不占用额外内存空间能否做到？</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/rotate-matrix-lcci/">https://leetcode-cn.com/problems/rotate-matrix-lcci/</a></p>
+</blockquote>
+<p>旋转后，对于矩阵中第 i 行的第 j个元素，在旋转后，它出现在倒数第 i 列的第 j个位置。<br>即matrix[col][n−row−1]&#x3D;matrix[row][col]。<br>如果是原地旋转，一次需要转四个角。也就是说，遍历时需要遍历四分之一的坐标，这些坐标在旋转过程中没有重合且旋转四次会覆盖整个矩阵。<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220404152016.png" alt="矩阵旋转"><br>下列代码采用的是第一种。</p>
+<pre><code class="cpp">void rotate(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) &#123;
+    int N=matrix.size(),temp;
+    for(int row=0;row&lt;N/2;row++)&#123;
+        for(int col=row;col&lt;=N-row-2;col++)&#123;
+            temp=matrix[row][col];
+            matrix[row][col]=matrix[N-col-1][row];
+            matrix[N-col-1][row]=matrix[N-row-1][N-col-1];
+            matrix[N-row-1][N-col-1]=matrix[col][N-row-1];
+            matrix[col][N-row-1]=temp;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>此外，水平轴翻转后再主对角线翻转，也可以得到要求的结果。</p>
+<h4 id="3-二叉树转链表"><a href="#3-二叉树转链表" class="headerlink" title="3.二叉树转链表"></a>3.二叉树转链表</h4><p>给你二叉树的根结点 root ，请你将它展开为一个单链表：<br>展开后的单链表应该同样使用TreeNode其中right子指针指向链表中下一个结点，而左子指针始终为null。<br>展开后的单链表应该与二叉树先序遍历顺序相同。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/">https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/</a></p>
+</blockquote>
+<p>原理：由于前序遍历访问各结点的顺序是根节点、左子树、右子树。因此右子树访问前的前驱结点是左子树最右的结点。<br>因此设置三个指针cur、next、pre。处理cur的左子树，next指向cur的左节点。如果next不存在，那么没有左子树也就前驱结点，不需要处理。pre指向cur的左子树的最右结点，将pre指向cur的右子树。最后，再将cur的左子树移到右子树，cur向其右孩子移动一步。</p>
+<p><strong>原地算法实现</strong></p>
+<pre><code class="cpp">/**
+ * Definition for a binary tree node.
+ * struct TreeNode &#123;
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;
+ * &#125;;
+ */
+void flatten(TreeNode* root) &#123;
+    TreeNode *cur = root;
+    while (cur != nullptr) &#123;
+        if (cur-&gt;left != nullptr) &#123;
+            TreeNode* next = cur-&gt;left;
+            TreeNode* predecessor = next;
+            while (predecessor-&gt;right != nullptr) &#123;
+                predecessor = predecessor-&gt;right;
+            &#125;
+            predecessor-&gt;right = cur-&gt;right;
+            cur-&gt;left = nullptr;
+            cur-&gt;right = next;
+        &#125;
+        cur = cur-&gt;right;
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<p>有的原地算法实现虽然不声明新的数据，但是由于过程涉及递归，程序还需要开辟栈空间，因此还是O(n)的空间复杂度，这种情况可以将递归分解。</p>
+</blockquote>
+<h4 id="最大子数组和"><a href="#最大子数组和" class="headerlink" title="最大子数组和"></a>最大子数组和</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-subarray/">https://leetcode-cn.com/problems/maximum-subarray/</a></p>
+</blockquote>
+<p>给你一个整数数组 nums,请你找出一个具有最大和的连续子数组（子数组最少包含一个元素）,返回其最大和。子数组是数组中的一个连续部分。</p>
+<p>运用简单动态规划的方式，设数组为nums，可以设置f(i)为“第i个数为结尾的子数组的最大和”，那么最大子数组和即为max(f(i))(1&lt;&#x3D;i&lt;&#x3D;nums.size())。<br>状态转移方程：f(i)&#x3D;max{f(i−1)+nums[i],nums[i]}。即最大值要么是以i-1结尾子数组加上nums[i],要么是nums[i]。对于这类简单动态规划，可以用O(1)的空间来维护之前的值。</p>
+<p><strong>原地算法实现</strong>：</p>
+<pre><code class="cpp">int maxSubArray(vector&lt;int&gt;&amp; nums) &#123;
+        int pre = 0, maxAns = nums[0];
+        for (const auto &amp;x: nums) &#123;
+            pre = max(pre + x, x);
+            maxAns = max(maxAns, pre);
+        &#125;
+        return maxAns;
+    &#125;
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
@@ -520,6 +624,18 @@
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>原地算法的经典题目</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.4k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
+    <p><span class="copy-title">发布时间:</span>2022-03-01, 19:19:12</p>
+    <p><span class="copy-title">最后更新:</span>2022-04-15, 21:11:25</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/01/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%8F%E5%85%B8%E9%A2%98%E7%9B%AE/" title="原地算法的经典题目">https://passacaglia424.github.io/2022/03/01/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%8F%E5%85%B8%E9%A2%98%E7%9B%AE/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
