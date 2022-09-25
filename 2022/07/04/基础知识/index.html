@@ -6,20 +6,17 @@
   <meta name="keywords" content=" 安全 , WEB ">
   <meta name="description" content="web安全相关基础理论知识 | Passacaglia的站点">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
+<meta name="description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Passacaglia的站点">
-<meta property="og:url" content="https://passacaglia424.github.io/local/C++%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86.html">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://passacaglia424.github.io/about/index.html">
 <meta property="og:site_name" content="Passacaglia的站点">
-<meta property="og:description" content="拷贝构造函数：没指定编译器也会指定；类拷贝的方式(包括类数组)。合成拷贝构造函数？ explicit关键字只能用于修饰只有一个参数的类构造函数, 它的作用是表明该构造函数是显式的, 不允许进行隐式转换, 跟它相对应的另一个关键字是implicit, 意思是隐藏的,类构造函数默认情况下即声明为implicit(隐式)。 拷贝赋值运算符：没指定编译器也会指定移动构造函数移动赋值运算符析构函数：没指定编">
+<meta property="og:description" content="关于本人本博客作者常用名为Passacaglia，源于钢琴曲《帕萨卡利亚》,当然，本质上的原因是比较喜欢的名字在很多平台上都被先注册了，因此我选择了一个比较冷门，又能拿出去解释而不失格调的……咳咳，总之，无论您来自何方，所见即是缘分。 关于博客本博客是本人记录和激励自己的一个空间，不用作任何商业用途,您可以任意转载并修改后二次发布，只需备注源链接及作者即可。如果您想在这个博客上留下一笔，也可以向邮">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
-<meta property="og:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304160615.png">
-<meta property="article:published_time" content="2022-04-08T02:34:36.396Z">
-<meta property="article:modified_time" content="2022-04-08T02:34:36.396Z">
+<meta property="article:published_time" content="2022-02-16T14:23:58.248Z">
+<meta property="article:modified_time" content="2022-02-16T14:23:58.248Z">
 <meta property="article:author" content="Passacaglia">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220304144655.png">
 
 
 <link rel="icon" href="/img/head.png">
@@ -237,7 +234,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="9">
-<input type="hidden" id="yelog_site_word_count" value="22k">
+<input type="hidden" id="yelog_site_word_count" value="22.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -488,12 +485,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-07-14 13:36:21'>2022-07-04 09:40</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-31 18:28:08'>2022-07-04 09:40</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.9k</span>
+        <span>字数:2k</span>
         
         
         
@@ -551,6 +548,7 @@
 <p><strong>目录扫描</strong>：dirsearch可用于目录扫描，如对于http页面扫描:</p>
 <pre><code class="shell">dirsearch -u  http://192.168.116.172:80
 </code></pre>
+<p>扫描会使用经典后缀php、html、js、apsx、jsp，但是实际使用的有可能是别的后缀，如php可能是php3、pht、phps等，可使用-e参数指定。</p>
 <h3 id="密文破解"><a href="#密文破解" class="headerlink" title="密文破解"></a>密文破解</h3><p><strong>Hash破解</strong>：可用hashcat工具，可设置字典破解、组合破解、掩码暴力破解等。可用于破解MD5、SHA等（通过-m参数指定)。</p>
 <h2 id="3-检测"><a href="#3-检测" class="headerlink" title="3.检测"></a>3.检测</h2><h3 id="Linux检测"><a href="#Linux检测" class="headerlink" title="Linux检测"></a>Linux检测</h3><p>&#x2F;root&#x2F;.bash_history：记录root用户执行过的历史命令，可直接用history指令打印。其它用户在自己的家目录下也会有各自的该文件，不过内容一般都会被入侵者删掉,因此最好配置一个另行备份的位置。</p>
 <p>&#x2F;etc&#x2F;init.d目录：开机自启动的服务<br>入侵者可能会用crontab命令设置恶意定时任务。排查位置：<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220713103416.png" alt="定时任务"></p>
@@ -580,10 +578,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>web安全相关基础理论知识</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">1.9k</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">2k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
     <p><span class="copy-title">发布时间:</span>2022-07-04, 09:40:26</p>
-    <p><span class="copy-title">最后更新:</span>2022-07-14, 13:36:21</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-31, 18:28:08</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/04/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="web安全相关基础理论知识">https://passacaglia424.github.io/2022/07/04/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
