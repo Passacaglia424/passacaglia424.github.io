@@ -152,7 +152,7 @@
     <li>
         <div class="all active" data-rel="全部内容">全部内容
             
-                <small>(9)</small>
+                <small>(10)</small>
             
         </div>
     </li>
@@ -205,7 +205,7 @@
                     <div data-rel="杂谈">
                         
                         杂谈
-                        <small>(2)</small>
+                        <small>(3)</small>
                         
                     </div>
                     
@@ -233,8 +233,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="9">
-<input type="hidden" id="yelog_site_word_count" value="22.2k">
+<input type="hidden" id="yelog_site_posts_number" value="10">
+<input type="hidden" id="yelog_site_word_count" value="24.6k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -304,6 +304,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>读书笔记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>链接</a>
             </li>
         
@@ -365,6 +369,14 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        <a  class="全部内容 杂谈 "
+           href="/2023/01/11/%E5%B9%B3%E8%A1%8C%E5%AE%87%E5%AE%99/"
+           data-tag="读书笔记"
+           data-author="" >
+            <span class="post-title" title="关于平行宇宙的多种可能性（理论型）">关于平行宇宙的多种可能性（理论型）</span>
+            <span class="post-date" title="2023-01-11 17:26:11">2023/01/11</span>
+        </a>
         
         <a  class="全部内容 安全 "
            href="/2022/07/04/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
@@ -485,7 +497,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-05-29 13:31:44'>2022-03-28 10:34</time>
+            发布时间 : <time class="date" title='最后更新: 2023-01-02 10:56:09'>2022-03-28 10:34</time>
         
     </div>
     <div class="article-meta">
@@ -550,7 +562,7 @@ Disallow: /none/a.html
 <p>cookie储存在document.cookie,想要查看网页Cookie可以F12调出开发人员选项，点击控制台(Console),输入命令：</p>
 <pre><code class="javascript">console.log(document.cookie);
 </code></pre>
-<p><strong>禁用Cookie</strong>:一般浏览器的设置&#x2F;Internet选项中可以设置禁止使用cookie。如谷歌浏览器在这:<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220328111424.png" alt="谷歌浏览器设置"><br>不过注意，部分网站退出后重新进入短时间内不需要重新登录的机制也是基于cookie，因此关闭后可能会有些麻烦。<br>ookie的数据保存于浏览器S，而session的数据保存于服务器，浏览器只保存session的ID。</p>
+<p><strong>禁用Cookie</strong>:一般浏览器的设置&#x2F;Internet选项中可以设置禁止使用cookie。如谷歌浏览器在这:<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220328111424.png" alt="谷歌浏览器设置"><br>不过注意，部分网站退出后重新进入短时间内不需要重新登录的机制也是基于cookie，因此关闭后可能会有些麻烦。<br>cookie的数据保存于浏览器，而session的数据保存于服务器（可存于redis)，浏览器只保存session的ID。</p>
 <h3 id="网页传参数"><a href="#网页传参数" class="headerlink" title="网页传参数"></a>网页传参数</h3><p><strong>GET</strong>方式：可以有简单方式，如果是php页面，在浏览器显示的页面的url上以?变量名1&#x3D;值1&amp;变量名2&#x3D;值2…的方式传值。<br>比如说使用360搜索”传值”，页面url上会发现q&#x3D;”传值”<br><img src="https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/https://upload-1300382050.cos.ap-guangzhou.myqcloud.com/20220328150301.png" alt="php传值"><br>实际上是它的服务器代码进行了赋值。也可以手动赋值。<br>php中 &#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 比较是不同的，前者只进行值比较。如判断a&#x3D;&#x3D;0,若a是无法转成数字的字符串，那么会转成0导致结果相等。这类情况会导致安全隐患。</p>
 <p><strong>POST</strong>方法传值就不能直接传了。但可以使用Burpsuite等工具，可以用浏览器的插件，也可以使用curl生成。而POST是可能会改变网站状态的，虽然通常情况下在一个没有设置处理POST提交的页面，POST提交没有任何作用。但是如果系统被侵入过，攻击者在页面中悄悄留下一句代码：</p>
 <pre><code>&lt;?php
@@ -584,7 +596,7 @@ Disallow: /none/a.html
     <p><span class="copy-title">字数:</span><span class="post-count">1.7k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="Passacaglia">Passacaglia</a></p>
     <p><span class="copy-title">发布时间:</span>2022-03-28, 10:34:03</p>
-    <p><span class="copy-title">最后更新:</span>2022-05-29, 13:31:44</p>
+    <p><span class="copy-title">最后更新:</span>2023-01-02, 10:56:09</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/03/28/%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%88%86%E6%9E%90%E7%BD%91%E7%AB%99%E5%8F%AF%E6%B3%A8%E6%84%8F%E7%9A%84%E5%86%85%E5%AE%B9%E7%82%B9/" title="搭建、分析网站可注意的内容点">https://passacaglia424.github.io/2022/03/28/%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%88%86%E6%9E%90%E7%BD%91%E7%AB%99%E5%8F%AF%E6%B3%A8%E6%84%8F%E7%9A%84%E5%86%85%E5%AE%B9%E7%82%B9/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
