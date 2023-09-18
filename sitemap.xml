@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://passacaglia424.github.io/2023/09/06/C++%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <loc>https://passacaglia424.github.io/local/C++%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</loc>
     
     <lastmod>2023-09-06</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://passacaglia424.github.io/2023/08/08/%E5%9B%BE%E5%BD%A2%E5%8F%98%E6%8D%A2/</loc>
+    <loc>https://passacaglia424.github.io/local/%E5%9B%BE%E5%BD%A2%E5%8F%98%E6%8D%A2.html</loc>
     
     <lastmod>2023-08-14</lastmod>
     
@@ -344,27 +344,6 @@
 
   
   <url>
-    <loc>https://passacaglia424.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://passacaglia424.github.io/tags/C/</loc>
-    <lastmod>2023-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://passacaglia424.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2023-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://passacaglia424.github.io/tags/github/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -379,7 +358,21 @@
   </url>
   
   <url>
+    <loc>https://passacaglia424.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2023-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://passacaglia424.github.io/tags/Rust/</loc>
+    <lastmod>2023-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://passacaglia424.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -394,20 +387,6 @@
   
   <url>
     <loc>https://passacaglia424.github.io/tags/sql/</loc>
-    <lastmod>2023-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://passacaglia424.github.io/tags/%E9%93%BE%E6%8E%A5/</loc>
-    <lastmod>2023-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://passacaglia424.github.io/tags/%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -435,7 +414,14 @@
   </url>
   
   <url>
-    <loc>https://passacaglia424.github.io/tags/%E5%85%9A%E5%91%98/</loc>
+    <loc>https://passacaglia424.github.io/tags/%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2023-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://passacaglia424.github.io/tags/%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -449,7 +435,7 @@
   </url>
   
   <url>
-    <loc>https://passacaglia424.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://passacaglia424.github.io/tags/%E5%85%9A%E5%91%98/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -457,6 +443,13 @@
   
   <url>
     <loc>https://passacaglia424.github.io/tags/WEB/</loc>
+    <lastmod>2023-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://passacaglia424.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

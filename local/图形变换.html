@@ -59,7 +59,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -155,7 +155,7 @@
     <li>
         <div class="all active" data-rel="全部内容">全部内容
             
-                <small>(15)</small>
+                <small>(13)</small>
             
         </div>
     </li>
@@ -180,7 +180,7 @@
                     <div data-rel="后端">
                         
                         后端
-                        <small>(3)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -236,8 +236,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="15">
-<input type="hidden" id="yelog_site_word_count" value="26.6k">
+<input type="hidden" id="yelog_site_posts_number" value="13">
+<input type="hidden" id="yelog_site_word_count" value="26.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -341,10 +341,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>C++</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>github</a>
             </li>
         
@@ -397,22 +393,6 @@
            data-author="" >
             <span class="post-title" title="sql注入全面分析">sql注入全面分析</span>
             <span class="post-date" title="2023-09-08 13:20:56">2023/09/08</span>
-        </a>
-        
-        <a  class="全部内容 后端 "
-           href="/2023/09/06/C++%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"
-           data-tag="C++,编程语言"
-           data-author="" >
-            <span class="post-title" title="C++性能优化的方式">C++性能优化的方式</span>
-            <span class="post-date" title="2023-09-06 21:10:19">2023/09/06</span>
-        </a>
-        
-        <a  class="全部内容 "
-           href="/2023/08/08/%E5%9B%BE%E5%BD%A2%E5%8F%98%E6%8D%A2/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2023-08-08 14:19:56">2023/08/08</span>
         </a>
         
         <a  class="全部内容 工具 "
@@ -473,7 +453,7 @@
         
         <a  class="全部内容 后端 "
            href="/2022/03/02/Rust%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-           data-tag="编程语言,Rust"
+           data-tag="Rust,编程语言"
            data-author="" >
             <span class="post-title" title="Rust学习笔记（基础篇）">Rust学习笔记（基础篇）</span>
             <span class="post-date" title="2022-03-02 07:47:44">2022/03/02</span>
@@ -519,12 +499,43 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     
+    <div class="article-meta">
         
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-08-14 15:52:16'>2023-09-18 13:57</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:83</span>
+        
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2"><span class="toc-text">仿射变换</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -537,16 +548,23 @@
     }
 </style>
 </div>
-            <img src="img/title.png">
-<img src="img/proverb.png">
-<br/>
-<br/>
-<img src="img/zombieking.png">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="仿射变换"><a href="#仿射变换" class="headerlink" title="仿射变换"></a>仿射变换</h3><p>向量空间经过一次线性变换加上一次平移。</p>
+<p>剪切变换：</p>
+<p>二维空间中，让列向量绕原点逆时针旋转角度θ，则左乘：<br>$$\begin{pmatrix}<br>cosθ&amp;-sinθ\<br>sinθ&amp;cos0\<br>\end{pmatrix}$$</p>
+<p>矩阵描述的变换永远也不会把一条直线变换成一条曲线。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 如果有任何有错误或不够清晰的表达，欢迎邮件至 passacaglia@88.com，谢谢！ </span>
+    </div>
+</article>
 
 
-        </article>
-        
-        
+
+
+
     <div id="comments"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
@@ -568,6 +586,13 @@
 </script>
 
 
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -576,11 +601,11 @@
 <!--p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p-->
 <p class="footer-entry"></p>
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
